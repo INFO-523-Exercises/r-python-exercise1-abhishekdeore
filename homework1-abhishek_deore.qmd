@@ -1,0 +1,1325 @@
+---
+title: "homework1-abhishek_deore"
+author: "Abhishek Deore"
+format: html
+editor: visual
+---
+
+# Introduction to Python
+
+Python is a versatile and widely-used programming language known for its simplicity and readability. Developed in the late 1980s by Guido van Rossum, Python has gained immense popularity in the world of software development and is frequently chosen as the first programming language for beginners.
+
+Here is some more information on Python :
+
+-   **High-Level Language:** Python is a high-level programming language known for its readability and simplicity. It uses English-like syntax, making it easy for beginners to learn and use.
+
+-   **Interpreted Language:** Python is an interpreted language, meaning you don't need to compile your code before running it. This makes the development process faster and more flexible.
+
+-   **Large Standard Library:** Python comes with a comprehensive standard library that provides ready-made modules and functions for various tasks, making it easier to perform common programming tasks without writing everything from scratch.
+
+-   **Dynamic Typing:** Python is dynamically typed, which means you don't need to declare variable types explicitly. The interpreter determines the data type at run-time, making coding more flexible but requiring careful attention to variable types.
+
+-   **Extensible:** Python can be extended with modules written in other languages like C and C++, allowing for performance optimization when needed.
+
+## 1.1 Elementary Data Types
+
+The Python standard library offers assistance for several fundamental data types, such as integers, boolean, floating points, and strings. An overview of these data types is presented in the table below.
+
+```{python}
+
+# this is an integer
+x = 10              
+print(x, type(x))
+
+# these are boolean values i.e True or False
+y = True 
+Y = False
+print(y, type(y))
+print(Y, type(Y))
+
+# this is a floating point number
+z = 3.7           
+print(z, type(z))
+
+# this is a string
+string1 = "This is a string"    
+print(string1, type(string1))
+
+```
+
+Following are some arithmetic operations on integers and floating point numbers.
+
+```{python}
+
+# operations on integers
+
+x=20 # value declaration
+y=2
+
+x1 = print(f"addition is       {x+y}")       #addition
+x2 = print(f"subtraction is    {x-y}")    #subtraction
+x3 = print(f"multiplication is {x*y}") #multiplication
+x4 = print(f"division is       {x/y}")       #division
+
+# operations on floating point numbers.
+
+x=9.5 # value declaration
+y=2.5
+
+x1 = print(f"addition is       {x+y}")       #addition
+x2 = print(f"subtraction is    {x-y}")       #subtraction
+x3 = print(f"multiplication is {x*y}")       #multiplication
+x4 = print(f"division is       {x/y}")       #division
+x5 = print(f"square is         {pow(x,2)} ") #squaring a number
+x6 = print(f"float to integer  {int(x)}")    #typecasting
+```
+
+Following are some of the functions provided by the 'math' module in python.
+
+```{python}
+
+import math #importing math library
+
+# math.sqrt(x): Calculates the square root of a number x
+result = math.sqrt(16)
+print(result)
+
+# math.ceil(x): Rounds a number x up to the nearest integer
+result = math.ceil(4.3)
+print(result)
+
+# math.floor(x): Rounds a number x down to the nearest integer
+result = math.floor(4.9)
+print(result)
+
+# math.pow(x, y): Calculates x raised to the power of y
+result = math.pow(2, 3)
+print(result)
+
+# math.pi: Returns the mathematical constant π (pi)
+pi_value = math.pi
+print(pi_value)
+
+# math.e: Returns the mathematical constant e (Euler's number)
+e_value = math.e
+print(e_value)
+
+# math.sin(x), math.cos(x), math.tan(x): Compute the trigonometric sine, cosine, and tangent of x, where x is in radians.
+angle = math.pi / 4  # 45 degrees in radians
+sin_value = math.sin(angle)
+cos_value = math.cos(angle)
+tan_value = math.tan(angle)
+
+print(sin_value, cos_value, tan_value)
+```
+
+Following are some logical operations on Boolean.
+
+```{python}
+
+x = True
+y = False
+
+print(x and y)       # logical AND
+print(x or y)        # logical OR
+print(x and not y)   # logical NOT
+```
+
+Following are some functions on manipulating strings.
+
+```{python}
+
+# Define a sample string
+sample_string = "Abhishek Deore"
+
+# 1. Length of the string
+length = len(sample_string)
+print(f"Length of the string: {length}")
+
+# 2. Accessing characters by index
+first_char = sample_string[0]
+print(f"First character: {first_char}")
+
+# 3. Slicing a string
+substring = sample_string[7:12]
+print(f"Sliced substring: {substring}")
+
+# 4. Concatenation
+new_string = sample_string + " How are you?"
+print(f"Concatenated string: {new_string}")
+
+# 5. String repetition
+repeated_string = sample_string * 3
+print(f"Repeated string: {repeated_string}")
+
+# 6. Changing case
+uppercase = sample_string.upper()
+lowercase = sample_string.lower()
+print(f"Uppercase: {uppercase}")
+print(f"Lowercase: {lowercase}")
+
+# 7. Checking for substring
+contains_hello = "Hello" in sample_string
+print(f"Contains 'Hello': {contains_hello}")
+
+# 8. Splitting a string
+split_result = sample_string.split(",")
+print(f"Split result: {split_result}")
+
+# 9. Stripping whitespace
+whitespace_string = "   This has whitespace   "
+stripped_string = whitespace_string.strip()
+print(f"Stripped string: '{stripped_string}'")
+
+# 10. Replacing substrings
+replaced_string = sample_string.replace("Hello", "Hi")
+print(f"Replaced string: {replaced_string}")
+
+# 11. Formatting strings
+name = "Abhishek"
+age = 22
+formatted_string = f"My name is {name} and I am {age} years old."
+print(f"Formatted string: {formatted_string}")
+
+```
+
+## 1.2 Compound Data types
+
+Following is how you create and manipulate list object.
+
+```{python}
+
+# Create a list
+my_list = [1, 2, 3, 4, 5]
+
+# 1. Accessing elements by index
+first_element = my_list[0]
+print(f"First element: {first_element}")
+
+# 2. Slicing a list
+subset = my_list[1:4]
+print(f"Sliced subset: {subset}")
+
+# 3. Modifying elements
+my_list[2] = 99
+print(f"Modified list: {my_list}")
+
+# 4. Appending elements
+my_list.append(6)
+print(f"Appended list: {my_list}")
+
+# 5. Extending with another list
+extension_list = [7, 8, 9]
+my_list.extend(extension_list)
+print(f"Extended list: {my_list}")
+
+# 6. Inserting an element at a specific position
+my_list.insert(2, 42)
+print(f"Inserted list: {my_list}")
+
+# 7. Removing an element by value
+my_list.remove(99)
+print(f"List after removing 99: {my_list}")
+
+# 8. Popping an element by index (removes and returns the value)
+popped_value = my_list.pop(3)
+print(f"Popped value: {popped_value}")
+print(f"List after popping: {my_list}")
+
+# 9. Checking for the existence of an element
+contains_5 = 5 in my_list
+print(f"Contains 5: {contains_5}")
+
+# 10. Finding the index of an element
+index_of_42 = my_list.index(42)
+print(f"Index of 42: {index_of_42}")
+
+# 11. Counting occurrences of an element
+count_of_6 = my_list.count(6)
+print(f"Count of 6: {count_of_6}")
+
+# 12. Sorting the list
+my_list.sort()
+print(f"Sorted list: {my_list}")
+
+# 13. Reversing the list
+my_list.reverse()
+print(f"Reversed list: {my_list}")
+
+```
+
+Following is how you create and manipulate a dictionary object.
+
+```{python}
+
+# Create a dictionary
+my_dict = {
+    "name": "Abhishek",
+    "age": 22,
+    "city": "Tucson",
+    "uni" : "UoA"
+}
+
+# 1. Accessing values by key
+name_value = my_dict["name"]
+print(f"Name: {name_value}")
+
+# 2. Modifying values
+my_dict["age"] = 31
+print(f"Modified dictionary: {my_dict}")
+
+# 3. Adding a new key-value pair
+my_dict["occupation"] = "Data-Scientist"
+print(f"Dictionary with new key-value pair: {my_dict}")
+
+# 4. Removing a key-value pair by key
+del my_dict["city"]
+print(f"Dictionary after removing 'city': {my_dict}")
+
+# 5. Checking for the existence of a key
+contains_age = "age" in my_dict
+print(f"Contains 'age': {contains_age}")
+
+# 6. Getting a list of keys
+keys_list = list(my_dict.keys())
+print(f"Keys list: {keys_list}")
+
+# 7. Getting a list of values
+values_list = list(my_dict.values())
+print(f"Values list: {values_list}")
+
+# 8. Iterating through key-value pairs
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+# 9. Clearing all key-value pairs
+my_dict.clear()
+print(f"Cleared dictionary: {my_dict}")
+
+```
+
+Following is how you create and manipulate a tuple object.
+
+```{python}
+
+# Create a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# 1. Accessing elements by index
+first_element = my_tuple[0]
+print(f"First element: {first_element}")
+
+# 2. Slicing a tuple
+subset = my_tuple[1:4]
+print(f"Sliced subset: {subset}")
+
+# 3. Nested tuples
+nested_tuple = (my_tuple, ("a", "b", "c"))
+print(f"Nested tuple: {nested_tuple}")
+
+# 4. Concatenating tuples
+concatenated_tuple = my_tuple + (6, 7)
+print(f"Concatenated tuple: {concatenated_tuple}")
+
+# 5. Replicating tuples
+repeated_tuple = my_tuple * 3
+print(f"Repeated tuple: {repeated_tuple}")
+
+# 6. Tuple unpacking
+a, b, c, d, e = my_tuple
+print(f"Unpacked values: {a}, {b}, {c}, {d}, {e}")
+
+# 7. Checking for the existence of an element
+contains_3 = 3 in my_tuple
+print(f"Contains 3: {contains_3}")
+
+# 8. Finding the index of an element
+index_of_4 = my_tuple.index(4)
+print(f"Index of 4: {index_of_4}")
+
+# 9. Counting occurrences of an element
+count_of_2 = my_tuple.count(2)
+print(f"Count of 2: {count_of_2}")
+
+```
+
+***Note*** : Tuples are immutable, which means once you create a tuple, you cannot modify its contents (add, remove, or change elements). This immutability makes them suitable for storing data that should not be altered.
+
+## 1.3 Control flow statements.
+
+Control flow statements in Python are used to control the execution flow of a program. They allow you to make decisions, repeat actions, and create more dynamic and complex behaviors in your code.
+
+1.  **Conditional Statements (`if`, `elif`, `else`):**
+
+-   **`if`** statements allow you to execute a block of code if a condition is true.
+
+-   **`elif`** (short for "else if") lets you specify additional conditions to check.
+
+-   **`else`** is used to define a block of code to execute when the condition in the **`if`** or **`elif`** statements is false.
+
+```{python}
+
+x=[1,2,3,4,5]
+
+if x[2]==3:
+    print(True)
+elif x[2]!=3:
+    print(False)
+else:
+    print("not found!")
+
+```
+
+2.  **Loops (for and while):**
+
+-   "**`for`**" loops are used to iterate over a sequence (e.g., a list, tuple, or string) or an iterable (e.g., a range).
+
+```{python}
+sequence = ['abhishek','ajinkya','shreya','himanshu']
+for item in sequence:
+     print(item + " is a student of UoA.")
+
+```
+
+-   **"`while`"** loops continue executing a block of code as long as a specified condition is true.
+
+    ```{python}
+
+    x=0
+    while x<11:
+      print(f"value of x in {x} iteration is {x}")
+      x=x+1
+      
+        
+
+    ```
+
+## 1.4 User defined functions
+
+User-defined functions in Python allow you to create your own custom functions to encapsulate a specific set of instructions and reuse them throughout your code.
+
+```{python}
+
+# User-defined function
+
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+# Calling the user-defined function
+
+sum_result = add_numbers(5, 3)
+print(f"Sum using user-defined function: {sum_result}")
+
+# Lambda function for subtraction
+
+subtract = lambda x, y: x - y
+
+# Calling the lambda function
+
+difference = subtract(8, 3)
+print(f"Difference using lambda function: {difference}")
+
+```
+
+## 1.5 File Input/Output
+
+File I/O (Input/Output) in Python allows you to work with files, reading data from them (input) or writing data to them (output).
+
+**File Modes:**
+
+-   When opening a file in Python, you specify a file mode that determines whether you're reading, writing, or appending to the file. Common file modes include:
+
+    1.  '**r**': Read (default) - Opens the file for reading.
+    2.  '**w**': Write - Opens the file for writing (creates a new file or truncates an existing one).
+    3.  '**a**': Append - Opens the file for writing (creates a new file or appends to an existing one).
+    4.  '**b**': Binary mode - Used with other modes to indicate binary file access (e.g., '**rb**', '**wb**').
+
+**File Handling Steps :**
+
+1.  Open the file using the "**`open`**" function, specifying the file name and mode.
+2.  Perform read or write operations on the file.
+3.  Close the file using the "**`close`**" method to release system resources.
+
+```{python}
+
+# Reading from a file
+try:
+    # Open the file for reading (default mode)
+    with open("sample.txt", "r") as file:
+        # Read the entire contents of the file
+        file_contents = file.read()
+        print("File Contents:")
+        print(file_contents)
+        
+except FileNotFoundError:
+    print("File not found.")
+
+# Writing to a new file
+try:
+    # Open a new file for writing (creates the file if it doesn't exist)
+    with open("new_file.txt", "w") as new_file:
+        # Write data to the new file
+        new_file.write("This is a new file.\n")
+        new_file.write("It contains some text.\n")
+        
+except IOError:
+    print("Error writing to the new file.")
+
+
+```
+
+# Introduction to Numpy and Pandas
+
+**NumPy (Numerical Python):**
+
+-   **Purpose:** NumPy is a fundamental library for numerical and mathematical operations in Python. It provides support for arrays and matrices, along with a wide range of mathematical functions to perform operations on these data structures.
+
+-   **Key Features:**
+
+    1.  **Multidimensional Arrays:** NumPy's primary data structure is the ndarray (n-dimensional array), which allows you to efficiently store and manipulate large datasets.
+    2.  **Mathematical Functions**: NumPy offers a vast collection of mathematical functions, including element-wise operations, linear algebra, statistical functions, and more.
+    3.  **Broadcasting**: NumPy allows for element-wise operations on arrays of different shapes, making it convenient for performing operations on datasets of varying dimensions.
+    4.  **Integration with Other Libraries**: NumPy is often used in conjunction with libraries like SciPy, Matplotlib, and scikit-learn for scientific computing, data visualization, and machine learning.
+
+**pandas:**
+
+-   **Purpose:** pandas is a powerful data manipulation and analysis library for Python. It provides easy-to-use data structures and data analysis tools for working with structured data (e.g., spreadsheets, databases).
+
+-   **Key Features:**
+
+    1.  **DataFrame**: The core data structure in pandas is the DataFrame, which is a two-dimensional, labeled data structure with columns of potentially different types. It resembles a table or spreadsheet and is used for data cleaning, exploration, and analysis.
+    2.  **Series**: **pandas** also provides the Series data structure, which is a one-dimensional labeled array, often used for representing columns or rows of data in a **DataFrame**.
+    3.  **Data Cleaning and Transformation**: pandas offers a wide range of functions for data cleaning, transformation, and manipulation, including filtering, grouping, pivoting, and handling missing data.
+    4.  **Data Import and Export**: pandas supports reading and writing data from/to various file formats, including CSV, Excel, SQL databases, and more.
+    5.  **Integration with Other Libraries**: **pandas** is commonly used alongside **NumPy**, **Matplotlib**, and **scikit-learn** for data analysis and visualization tasks.
+
+## 2.1 Introduction to NumPy
+
+### 2.1.1 Creating ndarray :
+
+Following are the steps for creating ndarray :
+
+1.  **Import NumPy:** First, import the NumPy library in your Python script or Jupyter Notebook by using the **`import numpy as np`** statement.
+
+2.  **Create an Array:** You can create a NumPy ndarray in several ways:
+
+    -   **From a Python List:** Use **`np.array(your_list)`** to create an ndarray from an existing Python list.
+
+    -   **Using Built-in Functions:** NumPy provides functions like **`np.zeros()`** , **`np.ones()`**, and **`np.empty()`** to create arrays filled with zeros, ones, or empty values.
+
+    -   **Generating Sequences:** You can use **`np.arrange(), np.linesapce(), np.logspace()`** to create arrays with specific sequences of numbers.
+
+    -   **Random Arrays:** Generate random arrays using functions like **`np.random.rand()`**, or **`np.random.randint()`**.
+
+3.  **Specify Data Type (Optional):** You can specify the data type of the elements in the array using the **`dtype`** parameter when creating the array. For example, **`np.array(your_list, dtype=np.float64)`**.
+
+4.  **Perform Operations:** You can perform various mathematical and logical operations on NumPy arrays, including element-wise operations, aggregation, and more.
+
+5.  **Accessing Elements:** Access elements in the array using indexing and slicing, just like you would with Python lists. NumPy arrays can be multi-dimensional, so you may need multiple indices for multi-dimensional arrays.
+
+6.  **Manipulating Arrays:** You can reshape, concatenate, and stack arrays using NumPy functions like **`np.reshape()`**, **`np.concatenate()`**, and **`np.vstack()`**.
+
+7.  **Array Attributes:** Explore array attributes like shape, size, and data type using attributes such as **`shape`**, **`size`**, and **`dtype`**.
+
+8.  **Array Functions:** NumPy provides numerous functions for array manipulation, including **`np.sum()`**, **`np.mean()`**, **`np.min()`**, **`np.max()`**, and many others.
+
+9.  **Array Slicing:** Use slicing to extract specific portions or subsets of the array. NumPy supports both basic and advanced slicing techniques.
+
+10. **Array Iteration:** Iterate through elements in an array using loops or vectorized operations to perform tasks on each element.
+
+11. **Array Broadcasting:** Understand and utilize NumPy's broadcasting rules for performing operations on arrays with different shapes.
+
+```{python}
+
+import numpy as np
+
+# Create a 1-dimensional array (vector)
+vector = np.array([1.0, 2, 3, 4, 5])
+print(vector)
+print("Number of Dimensions =", vector.ndim)
+print("Shape =", vector.shape)
+print("Size =", vector.size)
+print("Data Type of Array =", vector.dtype, '\n')
+
+# Create a two-dimensional array (matrix)
+matrix = np.array([[1, 2], [3, 4], [5, 6], [7, 8]])
+print(matrix)
+print("Number of Dimensions =", matrix.ndim)
+print("Shape =", matrix.shape)
+print("Size =", matrix.size)
+print("Data Type of Array =", matrix.dtype, '\n')
+
+# Create an ndarray from a tuple
+array_from_tuple = np.array([(1, 'a', 3.0), (2, 'b', 3.5)])
+print(array_from_tuple)
+print("Number of Dimensions =", array_from_tuple.ndim)
+print("Shape =", array_from_tuple.shape)
+print("Size =", array_from_tuple.size)
+
+
+```
+
+Built-in functions in numpy for creating ndarray.
+
+```{python}
+
+# Generate an array of random numbers from a uniform distribution [0, 1]
+
+print('Array of random numbers from a uniform distribution')
+print(np.random.rand(5))
+
+# Generate an array of random numbers from a normal distribution
+
+print('\nArray of random numbers from a normal distribution')
+print(np.random.randn(5))
+
+# Generate an array of integers ranging from -10 to 10 with a step size of 2
+
+print('\nArray of integers between -10 and 10, with a step size of 2')
+print(np.arange(-10, 10, 2))
+
+# Create a 2-dimensional array of integers from 0 to 11, reshaped to a matrix
+
+print('\n2-dimensional array of integers from 0 to 11')
+print(np.arange(12).reshape(3, 4))
+
+# Generate an array of values between 0 and 1, divided into 10 equally spaced values
+
+print('\nArray of values between 0 and 1, split into 10 equally spaced values')
+print(np.linspace(0, 1, 10))
+
+# Create an array of values ranging from 10^-3 to 10^3
+
+print('\nArray of values from 10^-3 to 10^3')
+print(np.logspace(-3, 3, 7))
+
+```
+
+### 2.1.2 Element-wise operations
+
+Element-wise operations in NumPy allow you to perform operations on each element of a NumPy array individually, without the need for explicit loops. This makes NumPy particularly efficient for mathematical and array operations.
+
+```{python}
+
+import numpy as np
+
+# Create two NumPy arrays for demonstration
+array1 = np.array([1, 2, 3, 4, 5])
+array2 = np.array([6, 7, 8, 9, 10])
+
+# Addition
+addition_result = array1 + array2
+print("Addition Result:")
+print(addition_result)
+
+# Subtraction
+subtraction_result = array1 - array2
+print("\nSubtraction Result:")
+print(subtraction_result)
+
+# Multiplication
+multiplication_result = array1 * array2
+print("\nMultiplication Result:")
+print(multiplication_result)
+
+# Division
+division_result = array1 / array2
+print("\nDivision Result:")
+print(division_result)
+
+# Element-wise Exponentiation
+exponentiation_result = np.power(array1, array2)
+print("\nElement-wise Exponentiation Result:")
+print(exponentiation_result)
+
+# Element-wise Square Root
+square_root_result = np.sqrt(array1)
+print("\nElement-wise Square Root Result:")
+print(square_root_result)
+
+# Element-wise Trigonometric Functions
+sin_result = np.sin(array1)
+cos_result = np.cos(array2)
+print("\nElement-wise Sin Result:")
+print(sin_result)
+print("\nElement-wise Cos Result:")
+print(cos_result)
+
+# Element-wise Comparison
+greater_than_result = array1 > array2
+print("\nElement-wise Comparison (Greater Than) Result:")
+print(greater_than_result)
+
+```
+
+### 2.1.3 Indexing and Slicing
+
+Indexing and slicing are fundamental techniques for accessing and manipulating data in NumPy arrays.
+
+1.  **Indexing:**
+
+-   Indexing refers to the process of accessing individual elements of a NumPy array.
+
+-   NumPy arrays are zero-indexed, which means the index of the first element is 0, the second element is 1, and so on.
+
+-   Indexing in NumPy can be done using square brackets **`[]`** with the index or indices enclosed.
+
+```{python}
+
+import numpy as np
+
+# Create a NumPy array
+arr = np.array([0, 1, 2, 3, 4])
+
+# Access individual elements by index
+element_2 = arr[2]  
+
+```
+
+2.  **Slicing:**
+
+-   Slicing allows you to extract a portion (subarray) of a NumPy array by specifying a range of indices.
+
+-   The slicing syntax is **`start:stop:step`**, where **`start`** is the index where the slice begins, **`stop`** is the index where it ends (exclusive), and **`step`** is the step size between elements.
+
+    ```{python}
+
+    import numpy as np
+
+    # Create a NumPy array
+    arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+    # Slicing examples
+    subarray1 = arr[2:6]    # Slice from index 2 to 5
+    subarray2 = arr[:5]     # Slice from the beginning to index 4 
+    subarray3 = arr[::2]    # Slice with a step of 2 
+    ```
+
+3.  **Multidimensional Arrays:**
+
+-   For multidimensional NumPy arrays (e.g., matrices), you can use indexing and slicing along multiple axes.
+
+-   Use a comma-separated pair of index or slice expressions to access elements or subarrays along different dimensions.
+
+    ```{python}
+
+    import numpy as np
+
+    # Create a 2D NumPy array (matrix)
+    matrix = np.array([[1, 2, 3],
+                       [4, 5, 6],
+                       [7, 8, 9]])
+
+    # Accessing elements in a 2D array
+    element_5 = matrix[1, 1]  # Access the element at row 1, column 1 (value: 5)
+
+    # Slicing a 2D array
+    row_2 = matrix[1, :]      # Slice the entire second row (values: [4, 5, 6])
+    col_3 = matrix[:, 2]      # Slice the entire third column (values: [3, 6, 9])
+
+    ```
+
+4.  **Negative Indexing:**
+
+-   Negative indices count from the end of the array, where **`-1`** represents the last element, **`-2`** the second-to-last, and so on.
+
+```{python}
+
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50])
+
+last_element = arr[-1]   
+
+```
+
+### 2.1.4 **Numpy Arithmetic and Statistical Functions**
+
+NumPy provides a wide range of statistical and arithmetic functions that are essential for numerical and scientific computing. Here's some theory information on these functions:
+
+**Arithmetic Functions:**
+
+1.  **Element-wise Operations:**
+
+    -   NumPy allows you to perform arithmetic operations element-wise on arrays. This means that operations are applied individually to each element of the array, resulting in a new array with the same shape.
+
+    -   Common element-wise operations include addition, subtraction, multiplication, division, exponentiation, and more.
+
+2.  **Broadcasting:**
+
+    -   Broadcasting is a powerful feature of NumPy that allows you to perform operations on arrays with different shapes. When operating on arrays of different shapes, NumPy automatically expands the smaller array to match the shape of the larger array.
+
+3.  **Reduction Operations:**
+
+    -   NumPy provides functions to perform reduction operations that aggregate the values in an array along a specified axis. Common reduction operations include sum, mean, median, minimum, maximum, and standard deviation.
+
+4.  **Aggregation Functions:**
+
+    -   Aggregation functions allow you to compute summary statistics of an array, such as the sum, mean, variance, and more, without specifying an axis. These functions return a single value.
+
+**Statistical Functions:**
+
+1.  **Descriptive Statistics:**
+
+    -   NumPy offers functions like **`np.mean()`**, **`np.median()`**, **`np.var()`**, and **`np.std()`** for calculating descriptive statistics of an array, providing insights into the central tendency and spread of data.
+
+2.  **Percentiles:**
+
+    -   You can compute percentiles using the **`np.percentile()`** function, which helps identify values below which a given percentage of data falls. For example, the median corresponds to the 50th percentile.
+
+3.  **Correlation and Covariance:**
+
+    -   NumPy provides functions like **`np.corrcoef()`** and **`np.cov()`** to compute the correlation coefficient and covariance between arrays, which are important in statistical analysis.
+
+4.  **Histograms:**
+
+    -   The **`np.histogram()`** function allows you to create histograms of data, which are useful for visualizing the distribution of values.
+
+5.  **Random Sampling:**
+
+    -   NumPy's **`np.random`** module provides functions for random sampling, including generating random numbers from various probability distributions, such as uniform, normal, and Poisson distributions.
+
+6.  **Linear Algebra:**
+
+    -   NumPy includes linear algebra functions for matrix operations, such as matrix multiplication (**`np.dot()`** or **`@`** operator), eigenvalue decomposition, singular value decomposition (SVD), and more.
+
+```{python}
+
+# Create an array 'y' with numerical values
+y = np.array([-1.4, 0.4, -3.2, 2.5, 3.4])
+print('Original array (y):', y, '\n')
+
+# Calculate the absolute values of 'y'
+print('Absolute values (np.abs(y)):', np.abs(y))
+
+# Compute the square root of the absolute values
+print('Square root of absolute values (np.sqrt(abs(y))):', np.sqrt(abs(y)))
+
+# Determine the sign (positive or negative) of each element in 'y'
+print('Sign of each element (np.sign(y)):', np.sign(y))
+
+# Apply exponentiation to each element in 'y'
+print('Exponentiation (np.exp(y)):', np.exp(y))
+
+# Sort the elements in 'y' in ascending order
+print('Sorted array (np.sort(y)):', np.sort(y))
+
+```
+
+```{python}
+
+# Create an array 'x' with a range from -2 to 2 (inclusive)
+x = np.arange(-2, 3)
+
+# Generate a random array 'y' with 5 elements
+y = np.random.randn(5)
+
+# Display the arrays 'x' and 'y'
+print('Array x:', x)
+print('Array y:', y, '\n')
+
+# Perform element-wise addition of 'x' and 'y'
+print('Element-wise addition (np.add(x, y)):', np.add(x, y))  # Equivalent to x + y
+
+# Perform element-wise subtraction of 'x' and 'y'
+print('Element-wise subtraction (np.subtract(x, y)):', np.subtract(x, y))  # Equivalent to x - y
+
+# Perform element-wise multiplication of 'x' and 'y'
+print('Element-wise multiplication (np.multiply(x, y)):', np.multiply(x, y))  # Equivalent to x * y
+
+# Perform element-wise division of 'x' by 'y'
+print('Element-wise division (np.divide(x, y)):', np.divide(x, y))  # Equivalent to x / y
+
+# Compute the element-wise maximum between 'x' and 'y'
+print('Element-wise maximum (np.maximum(x, y)):', np.maximum(x, y))  # Equivalent to max(x, y)
+
+```
+
+```{python}
+
+# Create an array 'y' with numeric values
+y = np.array([-3.2, -1.4, 0.4, 2.5, 3.4])
+print('Array y:', y, '\n')
+
+# Calculate the minimum value in 'y'
+print("Minimum value (np.min(y)):", np.min(y))
+
+# Calculate the maximum value in 'y'
+print("Maximum value (np.max(y)):", np.max(y))
+
+# Compute the average (mean) of the elements in 'y'
+print("Average (np.mean(y)):", np.mean(y))
+
+# Compute the standard deviation of the elements in 'y'
+print("Standard deviation (np.std(y)):", np.std(y))
+
+# Calculate the sum of all elements in 'y'
+print("Sum of elements (np.sum(y)):", np.sum(y))
+
+```
+
+### 2.1.5 Numpy Linear Algebra
+
+Following are some of the linear algebra functions provided in numpy library.
+
+```{python}
+
+# Create a 2 x 3 random matrix 'X'
+X = np.random.randn(2, 3)
+print('Matrix X:\n', X, '\n')
+
+# Compute the transpose of matrix 'X', denoted as 'X^T'
+print('Transpose of X (X^T):\n', X.T, '\n')
+
+# Create a random vector 'y'
+y = np.random.randn(3)
+print('Vector y:', y, '\n')
+
+# Perform matrix-vector multiplication between 'X' and 'y'
+print('Matrix-vector multiplication (X * y):')
+print('X.dot(y):\n', X.dot(y), '\n')
+
+# Perform matrix-matrix multiplication between 'X' and its transpose 'X^T'
+print('Matrix-matrix multiplication:')
+print('X.dot(X^T):\n', X.dot(X.T))  # Equivalent to X * X^T
+print('\nX.T.dot(X):\n', X.T.dot(X))  # Equivalent to X^T * X
+
+```
+
+```{python}
+
+# Create a random 5x3 matrix 'X'
+X = np.random.randn(5, 3)
+print('Matrix X:\n', X, '\n')
+
+# Calculate the square matrix 'C' as the result of 'X^T * X'
+C = X.T.dot(X)
+print('Matrix C (C = X^T * X):\n', C, '\n')
+
+# Compute the inverse of square matrix 'C'
+invC = np.linalg.inv(C)
+print('Inverse of C (np.linalg.inv(C)):\n', invC, '\n')
+
+# Calculate the determinant of square matrix 'C'
+detC = np.linalg.det(C)
+print('Determinant of C (np.linalg.det(C)):', detC)
+
+# Compute the eigenvalues 'S' and eigenvectors 'U' of square matrix 'C'
+S, U = np.linalg.eig(C)
+print('Eigenvalues of C:\n', S)
+print('Eigenvectors of C:\n', U)
+
+```
+
+## 2.2 Introduction to Pandas
+
+Pandas is a popular open-source Python library designed for data manipulation and analysis. It provides easy-to-use data structures like **`series`** and **`DataFrame`** and functions for working with structured data, such as spreadsheets or SQL tables.
+
+### 2.2.1 Series
+
+Following are the operations that could be done on a **`series`** data-structure.
+
+```{python}
+
+import pandas as pd
+
+# Create a sample Series
+data = {'A': 10, 'B': 20, 'C': 30, 'D': 40}
+series = pd.Series(data)
+
+# Display the original Series
+print("Original Series:")
+print(series)
+print()
+
+# Accessing and Slicing
+print("Accessing and Slicing:")
+print("Value at index 'B':", series['B'])
+print("Slicing by index ['B', 'C']:")
+print(series[['B', 'C']])
+print()
+
+# Mathematical Operations
+print("Mathematical Operations:")
+print("Add 5 to each element:")
+print(series + 5)
+print("Multiply each element by 2:")
+print(series * 2)
+print("Apply a custom function (e.g., square each element):")
+print(series.apply(lambda x: x**2))
+print()
+
+# Filtering
+print("Filtering:")
+print("Elements greater than 25:")
+print(series[series > 25])
+print()
+
+# Aggregation
+print("Aggregation:")
+print("Sum of all elements:", series.sum())
+print("Mean of elements:", series.mean())
+print("Maximum element:", series.max())
+print()
+
+# Sorting
+print("Sorting:")
+print("Sort in ascending order:")
+print(series.sort_values())
+print("Sort in descending order:")
+print(series.sort_values(ascending=False))
+print()
+
+# Index Manipulation
+print("Index Manipulation:")
+print("Reset index:")
+print(series.reset_index(drop=True))
+print("Set a new index:")
+new_index = ['X', 'Y', 'Z', 'W']
+print(series.reindex(new_index))
+print()
+
+# Other Operations
+print("Other Operations:")
+print("Check if an index exists ('A' in series):", 'A' in series)
+print("Get the unique values in the Series:", series.unique())
+print("Count the occurrences of each unique value:", series.value_counts())
+
+```
+
+### 2.2.2 DataFrame
+
+A DataFrame is a two-dimensional, tabular data structure in Python's pandas library. It is similar in structure to a spreadsheet or a SQL table.
+
+DataFrames are one of the most commonly used data structures for data manipulation and analysis in data science and data engineering tasks.
+
+```{python}
+import pandas as pd
+
+# Create a sample DataFrame
+data = {
+    'Name': ['Abhishek', 'Ajinkya', 'Shreya', 'Himanshu', 'Lara'],
+    'Age': [25, 30, 22, 35, 28],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Boston']
+}
+
+df = pd.DataFrame(data)
+
+# Display the DataFrame
+print("Original DataFrame:")
+print(df)
+
+
+# Selecting and Filtering
+print("Selecting and Filtering:")
+print("Select columns 'Name' and 'Age':")
+print(df[['Name', 'Age']])
+print("Filter rows where 'Age' is greater than 25:")
+print(df[df['Age'] > 25])
+print()
+
+# Sorting
+print("Sorting:")
+print("Sort by 'Age' in ascending order:")
+print(df.sort_values(by='Age'))
+print("Sort by 'Age' in descending order:")
+print(df.sort_values(by='Age', ascending=False))
+print()
+
+# Aggregation
+print("Aggregation:")
+print("Calculate mean age:", df['Age'].mean())
+print("Group by 'City' and calculate mean age for each group:")
+print(df.groupby('City')['Age'].mean())
+print()
+
+# Adding and Removing Columns
+print("Adding and Removing Columns:")
+df['Gender'] = ['Female', 'Male', 'Male', 'Male', 'Female']  # Add a new column 'Gender'
+print("DataFrame after adding 'Gender' column:")
+print(df)
+df.drop(columns=['Gender'], inplace=True)  # Remove the 'Gender' column
+print("DataFrame after removing 'Gender' column:")
+print(df)
+print()
+
+# Data Cleaning and Transformation
+print("Data Cleaning and Transformation:")
+df.loc[df['Age'] < 25, 'Age'] = 25  # Set ages below 25 to 25
+print("DataFrame after cleaning age values:")
+print(df)
+print()
+
+# Index Manipulation
+print("Index Manipulation:")
+df.set_index('Name', inplace=True)  # Set 'Name' column as the index
+print("DataFrame with 'Name' as index:")
+print(df)
+df.reset_index(inplace=True)  # Reset the index to default integer index
+print("DataFrame with default index:")
+print(df)
+print()
+
+# Data Input/Output
+print("Data Input/Output:")
+df.to_csv('sample.csv', index=False)  # Save the DataFrame to a CSV file
+loaded_df = pd.read_csv('sample.csv')  # Load data from the saved CSV file
+print("Loaded DataFrame from CSV:")
+print(loaded_df)
+
+
+```
+
+### 2.2.3 Arithmetic Operations
+
+Following are some of the arithemtic opearions that could be performed on a DataFrame.
+
+```{python}
+
+import pandas as pd
+
+# Create a sample DataFrame
+data = pd.DataFrame({
+    'Name': ['Abhishek', 'Ajinkya', 'Shreya', 'Himanshu', 'Lara'],
+    'Age': [25, 30, 22, 35, 28],
+    'City': ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Boston']
+})
+
+# Display the original data
+print("Original data:")
+print(data)
+
+# Transpose the data
+print("\nData after transposition (data.T):")
+print(data.T)
+
+# Perform addition by adding 4 to each element
+print("\nData after addition (data + 4):")
+print(data['Age'] + 4)
+
+# Perform multiplication by multiplying each element by 10
+print("\nData after multiplication (data * 10):")
+print(data * 10)
+
+# Create a new DataFrame 'data2' with random values
+columnNames = ['x1', 'x2', 'x3']
+data2 = pd.DataFrame(np.random.randn(5, 3), columns=columnNames)
+print("\nNew DataFrame 'data2':")
+print(data2)
+
+# Perform element-wise addition between 'data' and 'data2'
+print("\nResult of element-wise addition (data + data2):")
+print(data.add(data2))
+
+# Get the maximum value for each column
+print("\nMaximum value per column:")
+print(data.max())
+
+# Get the minimum value for each row
+print("\nMinimum value in 'Age':")
+print(data['Age'].min())
+
+# Get the sum of values for each column
+print("\nSum of values per column:")
+print(data.sum())
+
+# Get the average value for each row
+print("\nAverage value of 'Age':")
+print(data['Age'].mean())
+
+
+```
+
+The value_counts() function can also be applied to a pandas DataFrame.
+
+```{python}
+import pandas as pd
+objects = pd.DataFrame({'shape': ['circle', 'square', 'square', 'square', 'circle', 'rectangle'],
+           'color': ['red', 'red', 'red', 'blue', 'blue', 'blue']})
+
+
+print(objects)
+
+print(objects['shape'].value_counts().sort_values())
+
+```
+
+### 2.2.4 Plotting `Series` and `DataFrame:`
+
+You can visualize data in both Pandas Series and DataFrames using various types of plots and graphs with the help of libraries like Matplotlib and Seaborn.
+
+**For Series:**
+
+1.  **Line Plot:**
+
+    -   Use **`matplotlib.pyplot.plot()`** to create a line plot of a Series.
+
+    -   Useful for visualizing trends or changes in data over time or along a sequence.
+
+2.  **Bar Plot:**
+
+    -   Create bar plots using **`matplotlib.pyplot.bar()`** or **`pandas.Series.plot(kind='bar')`**.
+
+    -   Suitable for displaying categorical data or comparing different categories.
+
+3.  **Histogram:**
+
+    -   Plot a histogram of a Series using **`matplotlib.pyplot.hist()`** or **`pandas.Series.plot(kind='hist')`**.
+
+    -   Helps visualize the distribution of continuous data.
+
+4.  **Scatter Plot:**
+
+    -   Generate scatter plots using **`matplotlib.pyplot.scatter()`** or **`pandas.Series.plot(kind='scatter')`**.
+
+    -   Useful for visualizing relationships and correlations between two Series.
+
+5.  **Box Plot:**
+
+    -   Use **`matplotlib.pyplot.boxplot()`** or **`pandas.Series.plot(kind='box')`** to create box plots.
+
+    -   Shows the summary statistics (quartiles) and identifies outliers.
+
+**For DataFrames:**
+
+1.  **Line Plot:**
+
+    -   You can create line plots for each column in a DataFrame using **`pandas.DataFrame.plot()`** with **`kind='line'`**.
+
+    -   Useful for visualizing time-series data or trends in multiple variables.
+
+2.  **Bar Plot:**
+
+    -   Similar to Series, you can create bar plots for DataFrame columns using **`pandas.DataFrame.plot()`** with **`kind='bar'`**.
+
+    -   Compares categorical data across different columns.
+
+3.  **Histogram:**
+
+    -   Use **`pandas.DataFrame.plot()`** with **`kind='hist'`** to generate histograms for multiple columns.
+
+    -   Helps visualize the distribution of multiple variables.
+
+4.  **Scatter Plot:**
+
+    -   Create scatter plots for pairs of columns in a DataFrame using **`matplotlib.pyplot.scatter()`** or **`pandas.plotting.scatter_matrix()`**.
+
+    -   Useful for exploring relationships between multiple variables.
+
+5.  **Box Plot:**
+
+    -   Generate box plots for each column in a DataFrame using **`pandas.DataFrame.plot()`** with **`kind='box'`**.
+
+    -   Displays the distribution and summary statistics for multiple variables.
+
+6.  **Heatmap:**
+
+    -   Heatmaps can be created using libraries like Seaborn (**`seaborn.heatmap()`**) to visualize the correlation matrix of a DataFrame.
+
+    -   Helpful for identifying correlations between numerical variables.
+
+7.  **Pair Plot:**
+
+    -   Seaborn's **`seaborn.pairplot()`** function creates a grid of scatter plots for pairs of variables in a DataFrame.
+
+    -   Useful for quickly examining relationships between multiple variables.
+
+8.  **3D Plot:**
+
+    -   For three-dimensional data, you can create 3D scatter plots or surface plots using Matplotlib's 3D plotting functions.
+
+```{python}
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create a sample DataFrame
+
+data = {
+    'Year': [2010, 2011, 2012, 2013, 2014, 2015],
+    'Revenue': [10000, 12000, 15000, 18000, 20000, 22000],
+    'Profit': [2000, 2500, 3000, 3500, 4000, 4500],
+    'Expenses': [8000, 9500, 12000, 14500, 16000, 17500]
+}
+
+df = pd.DataFrame(data)
+```
+
+```{python}
+
+# Line Plot for Revenue and Profit over Years
+
+plt.figure(figsize=(10, 5))
+plt.plot(df['Year'], df['Revenue'], label='Revenue', marker='o')
+plt.plot(df['Year'], df['Profit'], label='Profit', marker='s')
+plt.title('Revenue and Profit Over Years')
+plt.xlabel('Year')
+plt.ylabel('Amount')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+```{python}
+
+# Bar Plot for Expenses
+
+plt.figure(figsize=(8, 5))
+plt.bar(df['Year'], df['Expenses'], color='red', alpha=0.6)
+plt.title('Expenses Over Years')
+plt.xlabel('Year')
+plt.ylabel('Amount')
+plt.grid(axis='y')
+plt.show()
+```
+
+```{python}
+
+# Histogram of Revenue
+
+plt.figure(figsize=(8, 5))
+plt.hist(df['Revenue'], bins=5, color='green', alpha=0.7, edgecolor='black')
+plt.title('Distribution of Revenue')
+plt.xlabel('Revenue')
+plt.ylabel('Frequency')
+plt.grid(axis='y')
+plt.show()
+```
+
+```{python}
+
+# Scatter Plot of Profit vs. Expenses
+
+plt.figure(figsize=(8, 5))
+plt.scatter(df['Profit'], df['Expenses'], c=df['Year'], cmap='viridis', s=100, alpha=0.7)
+plt.title('Profit vs. Expenses')
+plt.xlabel('Profit')
+plt.ylabel('Expenses')
+plt.colorbar(label='Year')
+plt.grid(True)
+plt.show()
+```
+
+```{python}
+
+# Box Plot of Profit
+
+plt.figure(figsize=(8, 5))
+plt.boxplot(df['Profit'], vert=False)
+plt.title('Box Plot of Profit')
+plt.grid(axis='x')
+plt.show()
+```
+
+```{python}
+
+# Pie Chart of Revenue Distribution
+
+plt.figure(figsize=(8, 8))
+plt.pie(df['Revenue'], labels=df['Year'], autopct='%1.1f%%', startangle=140)
+plt.title('Revenue Distribution Over Years')
+plt.axis('equal')
+plt.show()
+```

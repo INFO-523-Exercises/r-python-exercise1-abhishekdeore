@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Abhishek Deore">
+
+<title>homework1-abhishek_deore</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="homework1-abhishek_deore_files/libs/clipboard/clipboard.min.js"></script>
+<script src="homework1-abhishek_deore_files/libs/quarto-html/quarto.js"></script>
+<script src="homework1-abhishek_deore_files/libs/quarto-html/popper.min.js"></script>
+<script src="homework1-abhishek_deore_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="homework1-abhishek_deore_files/libs/quarto-html/anchor.min.js"></script>
+<link href="homework1-abhishek_deore_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="homework1-abhishek_deore_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="homework1-abhishek_deore_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="homework1-abhishek_deore_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="homework1-abhishek_deore_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">homework1-abhishek_deore</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Abhishek Deore </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction-to-python" class="level1">
+<h1>Introduction to Python</h1>
+<p>Python is a versatile and widely-used programming language known for its simplicity and readability. Developed in the late 1980s by Guido van Rossum, Python has gained immense popularity in the world of software development and is frequently chosen as the first programming language for beginners.</p>
+<p>Here is some more information on Python :</p>
+<ul>
+<li><p><strong>High-Level Language:</strong> Python is a high-level programming language known for its readability and simplicity. It uses English-like syntax, making it easy for beginners to learn and use.</p></li>
+<li><p><strong>Interpreted Language:</strong> Python is an interpreted language, meaning you don’t need to compile your code before running it. This makes the development process faster and more flexible.</p></li>
+<li><p><strong>Large Standard Library:</strong> Python comes with a comprehensive standard library that provides ready-made modules and functions for various tasks, making it easier to perform common programming tasks without writing everything from scratch.</p></li>
+<li><p><strong>Dynamic Typing:</strong> Python is dynamically typed, which means you don’t need to declare variable types explicitly. The interpreter determines the data type at run-time, making coding more flexible but requiring careful attention to variable types.</p></li>
+<li><p><strong>Extensible:</strong> Python can be extended with modules written in other languages like C and C++, allowing for performance optimization when needed.</p></li>
+</ul>
+<section id="elementary-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="elementary-data-types">1.1 Elementary Data Types</h2>
+<p>The Python standard library offers assistance for several fundamental data types, such as integers, boolean, floating points, and strings. An overview of these data types is presented in the table below.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is an integer</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span>              </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x, <span class="bu">type</span>(x))</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># these are boolean values i.e True or False</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="va">True</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y, <span class="bu">type</span>(y))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Y, <span class="bu">type</span>(Y))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a floating point number</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="fl">3.7</span>           </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(z, <span class="bu">type</span>(z))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># this is a string</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>string1 <span class="op">=</span> <span class="st">"This is a string"</span>    </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(string1, <span class="bu">type</span>(string1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>10 &lt;class 'int'&gt;
+True &lt;class 'bool'&gt;
+False &lt;class 'bool'&gt;
+3.7 &lt;class 'float'&gt;
+This is a string &lt;class 'str'&gt;</code></pre>
+</div>
+</div>
+<p>Following are some arithmetic operations on integers and floating point numbers.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># operations on integers</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="dv">20</span> <span class="co"># value declaration</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"addition is       </span><span class="sc">{</span>x<span class="op">+</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#addition</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"subtraction is    </span><span class="sc">{</span>x<span class="op">-</span>y<span class="sc">}</span><span class="ss">"</span>)    <span class="co">#subtraction</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>x3 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"multiplication is </span><span class="sc">{</span>x<span class="op">*</span>y<span class="sc">}</span><span class="ss">"</span>) <span class="co">#multiplication</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>x4 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"division is       </span><span class="sc">{</span>x<span class="op">/</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#division</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># operations on floating point numbers.</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="fl">9.5</span> <span class="co"># value declaration</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span><span class="fl">2.5</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"addition is       </span><span class="sc">{</span>x<span class="op">+</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#addition</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"subtraction is    </span><span class="sc">{</span>x<span class="op">-</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#subtraction</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>x3 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"multiplication is </span><span class="sc">{</span>x<span class="op">*</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#multiplication</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>x4 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"division is       </span><span class="sc">{</span>x<span class="op">/</span>y<span class="sc">}</span><span class="ss">"</span>)       <span class="co">#division</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>x5 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"square is         </span><span class="sc">{</span><span class="bu">pow</span>(x,<span class="dv">2</span>)<span class="sc">}</span><span class="ss"> "</span>) <span class="co">#squaring a number</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>x6 <span class="op">=</span> <span class="bu">print</span>(<span class="ss">f"float to integer  </span><span class="sc">{</span><span class="bu">int</span>(x)<span class="sc">}</span><span class="ss">"</span>)    <span class="co">#typecasting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>addition is       22
+subtraction is    18
+multiplication is 40
+division is       10.0
+addition is       12.0
+subtraction is    7.0
+multiplication is 23.75
+division is       3.8
+square is         90.25 
+float to integer  9</code></pre>
+</div>
+</div>
+<p>Following are some of the functions provided by the ‘math’ module in python.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="co">#importing math library</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># math.sqrt(x): Calculates the square root of a number x</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> math.sqrt(<span class="dv">16</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># math.ceil(x): Rounds a number x up to the nearest integer</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> math.ceil(<span class="fl">4.3</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># math.floor(x): Rounds a number x down to the nearest integer</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> math.floor(<span class="fl">4.9</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># math.pow(x, y): Calculates x raised to the power of y</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> math.<span class="bu">pow</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># math.pi: Returns the mathematical constant π (pi)</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>pi_value <span class="op">=</span> math.pi</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pi_value)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># math.e: Returns the mathematical constant e (Euler's number)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>e_value <span class="op">=</span> math.e</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(e_value)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># math.sin(x), math.cos(x), math.tan(x): Compute the trigonometric sine, cosine, and tangent of x, where x is in radians.</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>angle <span class="op">=</span> math.pi <span class="op">/</span> <span class="dv">4</span>  <span class="co"># 45 degrees in radians</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>sin_value <span class="op">=</span> math.sin(angle)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>cos_value <span class="op">=</span> math.cos(angle)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>tan_value <span class="op">=</span> math.tan(angle)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sin_value, cos_value, tan_value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4.0
+5
+4
+8.0
+3.141592653589793
+2.718281828459045
+0.7071067811865475 0.7071067811865476 0.9999999999999999</code></pre>
+</div>
+</div>
+<p>Following are some logical operations on Boolean.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x <span class="kw">and</span> y)       <span class="co"># logical AND</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x <span class="kw">or</span> y)        <span class="co"># logical OR</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x <span class="kw">and</span> <span class="kw">not</span> y)   <span class="co"># logical NOT</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False
+True
+True</code></pre>
+</div>
+</div>
+<p>Following are some functions on manipulating strings.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a sample string</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>sample_string <span class="op">=</span> <span class="st">"Abhishek Deore"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Length of the string</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>length <span class="op">=</span> <span class="bu">len</span>(sample_string)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Length of the string: </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Accessing characters by index</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>first_char <span class="op">=</span> sample_string[<span class="dv">0</span>]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"First character: </span><span class="sc">{</span>first_char<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Slicing a string</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>substring <span class="op">=</span> sample_string[<span class="dv">7</span>:<span class="dv">12</span>]</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sliced substring: </span><span class="sc">{</span>substring<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Concatenation</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>new_string <span class="op">=</span> sample_string <span class="op">+</span> <span class="st">" How are you?"</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Concatenated string: </span><span class="sc">{</span>new_string<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. String repetition</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>repeated_string <span class="op">=</span> sample_string <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Repeated string: </span><span class="sc">{</span>repeated_string<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Changing case</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>uppercase <span class="op">=</span> sample_string.upper()</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>lowercase <span class="op">=</span> sample_string.lower()</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Uppercase: </span><span class="sc">{</span>uppercase<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Lowercase: </span><span class="sc">{</span>lowercase<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Checking for substring</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>contains_hello <span class="op">=</span> <span class="st">"Hello"</span> <span class="kw">in</span> sample_string</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Contains 'Hello': </span><span class="sc">{</span>contains_hello<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Splitting a string</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>split_result <span class="op">=</span> sample_string.split(<span class="st">","</span>)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Split result: </span><span class="sc">{</span>split_result<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="co"># 9. Stripping whitespace</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>whitespace_string <span class="op">=</span> <span class="st">"   This has whitespace   "</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>stripped_string <span class="op">=</span> whitespace_string.strip()</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Stripped string: '</span><span class="sc">{</span>stripped_string<span class="sc">}</span><span class="ss">'"</span>)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="co"># 10. Replacing substrings</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>replaced_string <span class="op">=</span> sample_string.replace(<span class="st">"Hello"</span>, <span class="st">"Hi"</span>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Replaced string: </span><span class="sc">{</span>replaced_string<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 11. Formatting strings</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Abhishek"</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">22</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>formatted_string <span class="op">=</span> <span class="ss">f"My name is </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> and I am </span><span class="sc">{</span>age<span class="sc">}</span><span class="ss"> years old."</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Formatted string: </span><span class="sc">{</span>formatted_string<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Length of the string: 14
+First character: A
+Sliced substring: k Deo
+Concatenated string: Abhishek Deore How are you?
+Repeated string: Abhishek DeoreAbhishek DeoreAbhishek Deore
+Uppercase: ABHISHEK DEORE
+Lowercase: abhishek deore
+Contains 'Hello': False
+Split result: ['Abhishek Deore']
+Stripped string: 'This has whitespace'
+Replaced string: Abhishek Deore
+Formatted string: My name is Abhishek and I am 22 years old.</code></pre>
+</div>
+</div>
+</section>
+<section id="compound-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="compound-data-types">1.2 Compound Data types</h2>
+<p>Following is how you create and manipulate list object.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Accessing elements by index</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> my_list[<span class="dv">0</span>]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"First element: </span><span class="sc">{</span>first_element<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Slicing a list</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>subset <span class="op">=</span> my_list[<span class="dv">1</span>:<span class="dv">4</span>]</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sliced subset: </span><span class="sc">{</span>subset<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Modifying elements</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>my_list[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">99</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Modified list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Appending elements</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>my_list.append(<span class="dv">6</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Appended list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Extending with another list</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>extension_list <span class="op">=</span> [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>my_list.extend(extension_list)</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Extended list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Inserting an element at a specific position</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>my_list.insert(<span class="dv">2</span>, <span class="dv">42</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Inserted list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Removing an element by value</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>my_list.remove(<span class="dv">99</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"List after removing 99: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Popping an element by index (removes and returns the value)</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>popped_value <span class="op">=</span> my_list.pop(<span class="dv">3</span>)</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Popped value: </span><span class="sc">{</span>popped_value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"List after popping: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="co"># 9. Checking for the existence of an element</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>contains_5 <span class="op">=</span> <span class="dv">5</span> <span class="kw">in</span> my_list</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Contains 5: </span><span class="sc">{</span>contains_5<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="co"># 10. Finding the index of an element</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>index_of_42 <span class="op">=</span> my_list.index(<span class="dv">42</span>)</span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Index of 42: </span><span class="sc">{</span>index_of_42<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="co"># 11. Counting occurrences of an element</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>count_of_6 <span class="op">=</span> my_list.count(<span class="dv">6</span>)</span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Count of 6: </span><span class="sc">{</span>count_of_6<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a><span class="co"># 12. Sorting the list</span></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>my_list.sort()</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sorted list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a><span class="co"># 13. Reversing the list</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>my_list.reverse()</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Reversed list: </span><span class="sc">{</span>my_list<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First element: 1
+Sliced subset: [2, 3, 4]
+Modified list: [1, 2, 99, 4, 5]
+Appended list: [1, 2, 99, 4, 5, 6]
+Extended list: [1, 2, 99, 4, 5, 6, 7, 8, 9]
+Inserted list: [1, 2, 42, 99, 4, 5, 6, 7, 8, 9]
+List after removing 99: [1, 2, 42, 4, 5, 6, 7, 8, 9]
+Popped value: 4
+List after popping: [1, 2, 42, 5, 6, 7, 8, 9]
+Contains 5: True
+Index of 42: 2
+Count of 6: 1
+Sorted list: [1, 2, 5, 6, 7, 8, 9, 42]
+Reversed list: [42, 9, 8, 7, 6, 5, 2, 1]</code></pre>
+</div>
+</div>
+<p>Following is how you create and manipulate a dictionary object.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dictionary</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>my_dict <span class="op">=</span> {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"name"</span>: <span class="st">"Abhishek"</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>: <span class="dv">22</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"city"</span>: <span class="st">"Tucson"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"uni"</span> : <span class="st">"UoA"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Accessing values by key</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>name_value <span class="op">=</span> my_dict[<span class="st">"name"</span>]</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Name: </span><span class="sc">{</span>name_value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Modifying values</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>my_dict[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">31</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Modified dictionary: </span><span class="sc">{</span>my_dict<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Adding a new key-value pair</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>my_dict[<span class="st">"occupation"</span>] <span class="op">=</span> <span class="st">"Data-Scientist"</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Dictionary with new key-value pair: </span><span class="sc">{</span>my_dict<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Removing a key-value pair by key</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> my_dict[<span class="st">"city"</span>]</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Dictionary after removing 'city': </span><span class="sc">{</span>my_dict<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Checking for the existence of a key</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>contains_age <span class="op">=</span> <span class="st">"age"</span> <span class="kw">in</span> my_dict</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Contains 'age': </span><span class="sc">{</span>contains_age<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Getting a list of keys</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>keys_list <span class="op">=</span> <span class="bu">list</span>(my_dict.keys())</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Keys list: </span><span class="sc">{</span>keys_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Getting a list of values</span></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>values_list <span class="op">=</span> <span class="bu">list</span>(my_dict.values())</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Values list: </span><span class="sc">{</span>values_list<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Iterating through key-value pairs</span></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, value <span class="kw">in</span> my_dict.items():</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 9. Clearing all key-value pairs</span></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>my_dict.clear()</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Cleared dictionary: </span><span class="sc">{</span>my_dict<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Name: Abhishek
+Modified dictionary: {'name': 'Abhishek', 'age': 31, 'city': 'Tucson', 'uni': 'UoA'}
+Dictionary with new key-value pair: {'name': 'Abhishek', 'age': 31, 'city': 'Tucson', 'uni': 'UoA', 'occupation': 'Data-Scientist'}
+Dictionary after removing 'city': {'name': 'Abhishek', 'age': 31, 'uni': 'UoA', 'occupation': 'Data-Scientist'}
+Contains 'age': True
+Keys list: ['name', 'age', 'uni', 'occupation']
+Values list: ['Abhishek', 31, 'UoA', 'Data-Scientist']
+name: Abhishek
+age: 31
+uni: UoA
+occupation: Data-Scientist
+Cleared dictionary: {}</code></pre>
+</div>
+</div>
+<p>Following is how you create and manipulate a tuple object.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a tuple</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>my_tuple <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Accessing elements by index</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>first_element <span class="op">=</span> my_tuple[<span class="dv">0</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"First element: </span><span class="sc">{</span>first_element<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Slicing a tuple</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>subset <span class="op">=</span> my_tuple[<span class="dv">1</span>:<span class="dv">4</span>]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sliced subset: </span><span class="sc">{</span>subset<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Nested tuples</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>nested_tuple <span class="op">=</span> (my_tuple, (<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>))</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Nested tuple: </span><span class="sc">{</span>nested_tuple<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Concatenating tuples</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>concatenated_tuple <span class="op">=</span> my_tuple <span class="op">+</span> (<span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Concatenated tuple: </span><span class="sc">{</span>concatenated_tuple<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Replicating tuples</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>repeated_tuple <span class="op">=</span> my_tuple <span class="op">*</span> <span class="dv">3</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Repeated tuple: </span><span class="sc">{</span>repeated_tuple<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. Tuple unpacking</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>a, b, c, d, e <span class="op">=</span> my_tuple</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Unpacked values: </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>d<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 7. Checking for the existence of an element</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>contains_3 <span class="op">=</span> <span class="dv">3</span> <span class="kw">in</span> my_tuple</span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Contains 3: </span><span class="sc">{</span>contains_3<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="co"># 8. Finding the index of an element</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>index_of_4 <span class="op">=</span> my_tuple.index(<span class="dv">4</span>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Index of 4: </span><span class="sc">{</span>index_of_4<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="co"># 9. Counting occurrences of an element</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>count_of_2 <span class="op">=</span> my_tuple.count(<span class="dv">2</span>)</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Count of 2: </span><span class="sc">{</span>count_of_2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First element: 1
+Sliced subset: (2, 3, 4)
+Nested tuple: ((1, 2, 3, 4, 5), ('a', 'b', 'c'))
+Concatenated tuple: (1, 2, 3, 4, 5, 6, 7)
+Repeated tuple: (1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5)
+Unpacked values: 1, 2, 3, 4, 5
+Contains 3: True
+Index of 4: 3
+Count of 2: 1</code></pre>
+</div>
+</div>
+<p><strong><em>Note</em></strong> : Tuples are immutable, which means once you create a tuple, you cannot modify its contents (add, remove, or change elements). This immutability makes them suitable for storing data that should not be altered.</p>
+</section>
+<section id="control-flow-statements." class="level2">
+<h2 class="anchored" data-anchor-id="control-flow-statements.">1.3 Control flow statements.</h2>
+<p>Control flow statements in Python are used to control the execution flow of a program. They allow you to make decisions, repeat actions, and create more dynamic and complex behaviors in your code.</p>
+<ol type="1">
+<li><strong>Conditional Statements (<code>if</code>, <code>elif</code>, <code>else</code>):</strong></li>
+</ol>
+<ul>
+<li><p><strong><code>if</code></strong> statements allow you to execute a block of code if a condition is true.</p></li>
+<li><p><strong><code>elif</code></strong> (short for “else if”) lets you specify additional conditions to check.</p></li>
+<li><p><strong><code>else</code></strong> is used to define a block of code to execute when the condition in the <strong><code>if</code></strong> or <strong><code>elif</code></strong> statements is false.</p></li>
+</ul>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x[<span class="dv">2</span>]<span class="op">==</span><span class="dv">3</span>:</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="va">True</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> x[<span class="dv">2</span>]<span class="op">!=</span><span class="dv">3</span>:</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="va">False</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"not found!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Loops (for and while):</strong></li>
+</ol>
+<ul>
+<li>“<strong><code>for</code></strong>” loops are used to iterate over a sequence (e.g., a list, tuple, or string) or an iterable (e.g., a range).</li>
+</ul>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sequence <span class="op">=</span> [<span class="st">'abhishek'</span>,<span class="st">'ajinkya'</span>,<span class="st">'shreya'</span>,<span class="st">'himanshu'</span>]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> sequence:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(item <span class="op">+</span> <span class="st">" is a student of UoA."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>abhishek is a student of UoA.
+ajinkya is a student of UoA.
+shreya is a student of UoA.
+himanshu is a student of UoA.</code></pre>
+</div>
+</div>
+<ul>
+<li><p><strong>“<code>while</code>”</strong> loops continue executing a block of code as long as a specified condition is true.</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x<span class="op">&lt;</span><span class="dv">11</span>:</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"value of x in </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss"> iteration is </span><span class="sc">{</span>x<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  x<span class="op">=</span>x<span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>value of x in 0 iteration is 0
+value of x in 1 iteration is 1
+value of x in 2 iteration is 2
+value of x in 3 iteration is 3
+value of x in 4 iteration is 4
+value of x in 5 iteration is 5
+value of x in 6 iteration is 6
+value of x in 7 iteration is 7
+value of x in 8 iteration is 8
+value of x in 9 iteration is 9
+value of x in 10 iteration is 10</code></pre>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="user-defined-functions" class="level2">
+<h2 class="anchored" data-anchor-id="user-defined-functions">1.4 User defined functions</h2>
+<p>User-defined functions in Python allow you to create your own custom functions to encapsulate a specific set of instructions and reuse them throughout your code.</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># User-defined function</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_numbers(a, b):</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calling the user-defined function</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>sum_result <span class="op">=</span> add_numbers(<span class="dv">5</span>, <span class="dv">3</span>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sum using user-defined function: </span><span class="sc">{</span>sum_result<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Lambda function for subtraction</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>subtract <span class="op">=</span> <span class="kw">lambda</span> x, y: x <span class="op">-</span> y</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Calling the lambda function</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>difference <span class="op">=</span> subtract(<span class="dv">8</span>, <span class="dv">3</span>)</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Difference using lambda function: </span><span class="sc">{</span>difference<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sum using user-defined function: 8
+Difference using lambda function: 5</code></pre>
+</div>
+</div>
+</section>
+<section id="file-inputoutput" class="level2">
+<h2 class="anchored" data-anchor-id="file-inputoutput">1.5 File Input/Output</h2>
+<p>File I/O (Input/Output) in Python allows you to work with files, reading data from them (input) or writing data to them (output).</p>
+<p><strong>File Modes:</strong></p>
+<ul>
+<li><p>When opening a file in Python, you specify a file mode that determines whether you’re reading, writing, or appending to the file. Common file modes include:</p>
+<ol type="1">
+<li>‘<strong>r</strong>’: Read (default) - Opens the file for reading.</li>
+<li>‘<strong>w</strong>’: Write - Opens the file for writing (creates a new file or truncates an existing one).</li>
+<li>‘<strong>a</strong>’: Append - Opens the file for writing (creates a new file or appends to an existing one).</li>
+<li>‘<strong>b</strong>’: Binary mode - Used with other modes to indicate binary file access (e.g., ‘<strong>rb</strong>’, ‘<strong>wb</strong>’).</li>
+</ol></li>
+</ul>
+<p><strong>File Handling Steps :</strong></p>
+<ol type="1">
+<li>Open the file using the “<strong><code>open</code></strong>” function, specifying the file name and mode.</li>
+<li>Perform read or write operations on the file.</li>
+<li>Close the file using the “<strong><code>close</code></strong>” method to release system resources.</li>
+</ol>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reading from a file</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Open the file for reading (default mode)</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="st">"sample.txt"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Read the entire contents of the file</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>        file_contents <span class="op">=</span> <span class="bu">file</span>.read()</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"File Contents:"</span>)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(file_contents)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">FileNotFoundError</span>:</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"File not found."</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Writing to a new file</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Open a new file for writing (creates the file if it doesn't exist)</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="st">"new_file.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> new_file:</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Write data to the new file</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>        new_file.write(<span class="st">"This is a new file.</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>        new_file.write(<span class="st">"It contains some text.</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">IOError</span>:</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error writing to the new file."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>File not found.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="introduction-to-numpy-and-pandas" class="level1">
+<h1>Introduction to Numpy and Pandas</h1>
+<p><strong>NumPy (Numerical Python):</strong></p>
+<ul>
+<li><p><strong>Purpose:</strong> NumPy is a fundamental library for numerical and mathematical operations in Python. It provides support for arrays and matrices, along with a wide range of mathematical functions to perform operations on these data structures.</p></li>
+<li><p><strong>Key Features:</strong></p>
+<ol type="1">
+<li><strong>Multidimensional Arrays:</strong> NumPy’s primary data structure is the ndarray (n-dimensional array), which allows you to efficiently store and manipulate large datasets.</li>
+<li><strong>Mathematical Functions</strong>: NumPy offers a vast collection of mathematical functions, including element-wise operations, linear algebra, statistical functions, and more.</li>
+<li><strong>Broadcasting</strong>: NumPy allows for element-wise operations on arrays of different shapes, making it convenient for performing operations on datasets of varying dimensions.</li>
+<li><strong>Integration with Other Libraries</strong>: NumPy is often used in conjunction with libraries like SciPy, Matplotlib, and scikit-learn for scientific computing, data visualization, and machine learning.</li>
+</ol></li>
+</ul>
+<p><strong>pandas:</strong></p>
+<ul>
+<li><p><strong>Purpose:</strong> pandas is a powerful data manipulation and analysis library for Python. It provides easy-to-use data structures and data analysis tools for working with structured data (e.g., spreadsheets, databases).</p></li>
+<li><p><strong>Key Features:</strong></p>
+<ol type="1">
+<li><strong>DataFrame</strong>: The core data structure in pandas is the DataFrame, which is a two-dimensional, labeled data structure with columns of potentially different types. It resembles a table or spreadsheet and is used for data cleaning, exploration, and analysis.</li>
+<li><strong>Series</strong>: <strong>pandas</strong> also provides the Series data structure, which is a one-dimensional labeled array, often used for representing columns or rows of data in a <strong>DataFrame</strong>.</li>
+<li><strong>Data Cleaning and Transformation</strong>: pandas offers a wide range of functions for data cleaning, transformation, and manipulation, including filtering, grouping, pivoting, and handling missing data.</li>
+<li><strong>Data Import and Export</strong>: pandas supports reading and writing data from/to various file formats, including CSV, Excel, SQL databases, and more.</li>
+<li><strong>Integration with Other Libraries</strong>: <strong>pandas</strong> is commonly used alongside <strong>NumPy</strong>, <strong>Matplotlib</strong>, and <strong>scikit-learn</strong> for data analysis and visualization tasks.</li>
+</ol></li>
+</ul>
+<section id="introduction-to-numpy" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-numpy">2.1 Introduction to NumPy</h2>
+<section id="creating-ndarray" class="level3">
+<h3 class="anchored" data-anchor-id="creating-ndarray">2.1.1 Creating ndarray :</h3>
+<p>Following are the steps for creating ndarray :</p>
+<ol type="1">
+<li><p><strong>Import NumPy:</strong> First, import the NumPy library in your Python script or Jupyter Notebook by using the <strong><code>import numpy as np</code></strong> statement.</p></li>
+<li><p><strong>Create an Array:</strong> You can create a NumPy ndarray in several ways:</p>
+<ul>
+<li><p><strong>From a Python List:</strong> Use <strong><code>np.array(your_list)</code></strong> to create an ndarray from an existing Python list.</p></li>
+<li><p><strong>Using Built-in Functions:</strong> NumPy provides functions like <strong><code>np.zeros()</code></strong> , <strong><code>np.ones()</code></strong>, and <strong><code>np.empty()</code></strong> to create arrays filled with zeros, ones, or empty values.</p></li>
+<li><p><strong>Generating Sequences:</strong> You can use <strong><code>np.arrange(), np.linesapce(), np.logspace()</code></strong> to create arrays with specific sequences of numbers.</p></li>
+<li><p><strong>Random Arrays:</strong> Generate random arrays using functions like <strong><code>np.random.rand()</code></strong>, or <strong><code>np.random.randint()</code></strong>.</p></li>
+</ul></li>
+<li><p><strong>Specify Data Type (Optional):</strong> You can specify the data type of the elements in the array using the <strong><code>dtype</code></strong> parameter when creating the array. For example, <strong><code>np.array(your_list, dtype=np.float64)</code></strong>.</p></li>
+<li><p><strong>Perform Operations:</strong> You can perform various mathematical and logical operations on NumPy arrays, including element-wise operations, aggregation, and more.</p></li>
+<li><p><strong>Accessing Elements:</strong> Access elements in the array using indexing and slicing, just like you would with Python lists. NumPy arrays can be multi-dimensional, so you may need multiple indices for multi-dimensional arrays.</p></li>
+<li><p><strong>Manipulating Arrays:</strong> You can reshape, concatenate, and stack arrays using NumPy functions like <strong><code>np.reshape()</code></strong>, <strong><code>np.concatenate()</code></strong>, and <strong><code>np.vstack()</code></strong>.</p></li>
+<li><p><strong>Array Attributes:</strong> Explore array attributes like shape, size, and data type using attributes such as <strong><code>shape</code></strong>, <strong><code>size</code></strong>, and <strong><code>dtype</code></strong>.</p></li>
+<li><p><strong>Array Functions:</strong> NumPy provides numerous functions for array manipulation, including <strong><code>np.sum()</code></strong>, <strong><code>np.mean()</code></strong>, <strong><code>np.min()</code></strong>, <strong><code>np.max()</code></strong>, and many others.</p></li>
+<li><p><strong>Array Slicing:</strong> Use slicing to extract specific portions or subsets of the array. NumPy supports both basic and advanced slicing techniques.</p></li>
+<li><p><strong>Array Iteration:</strong> Iterate through elements in an array using loops or vectorized operations to perform tasks on each element.</p></li>
+<li><p><strong>Array Broadcasting:</strong> Understand and utilize NumPy’s broadcasting rules for performing operations on arrays with different shapes.</p></li>
+</ol>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 1-dimensional array (vector)</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vector)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Dimensions ="</span>, vector.ndim)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Shape ="</span>, vector.shape)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Size ="</span>, vector.size)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data Type of Array ="</span>, vector.dtype, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a two-dimensional array (matrix)</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>], [<span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Dimensions ="</span>, matrix.ndim)</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Shape ="</span>, matrix.shape)</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Size ="</span>, matrix.size)</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data Type of Array ="</span>, matrix.dtype, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an ndarray from a tuple</span></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>array_from_tuple <span class="op">=</span> np.array([(<span class="dv">1</span>, <span class="st">'a'</span>, <span class="fl">3.0</span>), (<span class="dv">2</span>, <span class="st">'b'</span>, <span class="fl">3.5</span>)])</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(array_from_tuple)</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of Dimensions ="</span>, array_from_tuple.ndim)</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Shape ="</span>, array_from_tuple.shape)</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Size ="</span>, array_from_tuple.size)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1. 2. 3. 4. 5.]
+Number of Dimensions = 1
+Shape = (5,)
+Size = 5
+Data Type of Array = float64 
+
+[[1 2]
+ [3 4]
+ [5 6]
+ [7 8]]
+Number of Dimensions = 2
+Shape = (4, 2)
+Size = 8
+Data Type of Array = int64 
+
+[['1' 'a' '3.0']
+ ['2' 'b' '3.5']]
+Number of Dimensions = 2
+Shape = (2, 3)
+Size = 6</code></pre>
+</div>
+</div>
+<p>Built-in functions in numpy for creating ndarray.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate an array of random numbers from a uniform distribution [0, 1]</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Array of random numbers from a uniform distribution'</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.rand(<span class="dv">5</span>))</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate an array of random numbers from a normal distribution</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Array of random numbers from a normal distribution'</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.random.randn(<span class="dv">5</span>))</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate an array of integers ranging from -10 to 10 with a step size of 2</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Array of integers between -10 and 10, with a step size of 2'</span>)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2-dimensional array of integers from 0 to 11, reshaped to a matrix</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">2-dimensional array of integers from 0 to 11'</span>)</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">12</span>).reshape(<span class="dv">3</span>, <span class="dv">4</span>))</span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate an array of values between 0 and 1, divided into 10 equally spaced values</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Array of values between 0 and 1, split into 10 equally spaced values'</span>)</span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">10</span>))</span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array of values ranging from 10^-3 to 10^3</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Array of values from 10^-3 to 10^3'</span>)</span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.logspace(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">7</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Array of random numbers from a uniform distribution
+[0.58958643 0.9357223  0.15315611 0.80980585 0.21787144]
+
+Array of random numbers from a normal distribution
+[-2.58832173 -0.39866126  0.39005673 -0.25811094  1.20526442]
+
+Array of integers between -10 and 10, with a step size of 2
+[-10  -8  -6  -4  -2   0   2   4   6   8]
+
+2-dimensional array of integers from 0 to 11
+[[ 0  1  2  3]
+ [ 4  5  6  7]
+ [ 8  9 10 11]]
+
+Array of values between 0 and 1, split into 10 equally spaced values
+[0.         0.11111111 0.22222222 0.33333333 0.44444444 0.55555556
+ 0.66666667 0.77777778 0.88888889 1.        ]
+
+Array of values from 10^-3 to 10^3
+[1.e-03 1.e-02 1.e-01 1.e+00 1.e+01 1.e+02 1.e+03]</code></pre>
+</div>
+</div>
+</section>
+<section id="element-wise-operations" class="level3">
+<h3 class="anchored" data-anchor-id="element-wise-operations">2.1.2 Element-wise operations</h3>
+<p>Element-wise operations in NumPy allow you to perform operations on each element of a NumPy array individually, without the need for explicit loops. This makes NumPy particularly efficient for mathematical and array operations.</p>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two NumPy arrays for demonstration</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>array1 <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>array2 <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Addition</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>addition_result <span class="op">=</span> array1 <span class="op">+</span> array2</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Addition Result:"</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(addition_result)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Subtraction</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>subtraction_result <span class="op">=</span> array1 <span class="op">-</span> array2</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Subtraction Result:"</span>)</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(subtraction_result)</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Multiplication</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>multiplication_result <span class="op">=</span> array1 <span class="op">*</span> array2</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Multiplication Result:"</span>)</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(multiplication_result)</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Division</span></span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>division_result <span class="op">=</span> array1 <span class="op">/</span> array2</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Division Result:"</span>)</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(division_result)</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Element-wise Exponentiation</span></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>exponentiation_result <span class="op">=</span> np.power(array1, array2)</span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Element-wise Exponentiation Result:"</span>)</span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(exponentiation_result)</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Element-wise Square Root</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>square_root_result <span class="op">=</span> np.sqrt(array1)</span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Element-wise Square Root Result:"</span>)</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(square_root_result)</span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Element-wise Trigonometric Functions</span></span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>sin_result <span class="op">=</span> np.sin(array1)</span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>cos_result <span class="op">=</span> np.cos(array2)</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Element-wise Sin Result:"</span>)</span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sin_result)</span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Element-wise Cos Result:"</span>)</span>
+<span id="cb31-43"><a href="#cb31-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cos_result)</span>
+<span id="cb31-44"><a href="#cb31-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-45"><a href="#cb31-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Element-wise Comparison</span></span>
+<span id="cb31-46"><a href="#cb31-46" aria-hidden="true" tabindex="-1"></a>greater_than_result <span class="op">=</span> array1 <span class="op">&gt;</span> array2</span>
+<span id="cb31-47"><a href="#cb31-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Element-wise Comparison (Greater Than) Result:"</span>)</span>
+<span id="cb31-48"><a href="#cb31-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greater_than_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Addition Result:
+[ 7  9 11 13 15]
+
+Subtraction Result:
+[-5 -5 -5 -5 -5]
+
+Multiplication Result:
+[ 6 14 24 36 50]
+
+Division Result:
+[0.16666667 0.28571429 0.375      0.44444444 0.5       ]
+
+Element-wise Exponentiation Result:
+[      1     128    6561  262144 9765625]
+
+Element-wise Square Root Result:
+[1.         1.41421356 1.73205081 2.         2.23606798]
+
+Element-wise Sin Result:
+[ 0.84147098  0.90929743  0.14112001 -0.7568025  -0.95892427]
+
+Element-wise Cos Result:
+[ 0.96017029  0.75390225 -0.14550003 -0.91113026 -0.83907153]
+
+Element-wise Comparison (Greater Than) Result:
+[False False False False False]</code></pre>
+</div>
+</div>
+</section>
+<section id="indexing-and-slicing" class="level3">
+<h3 class="anchored" data-anchor-id="indexing-and-slicing">2.1.3 Indexing and Slicing</h3>
+<p>Indexing and slicing are fundamental techniques for accessing and manipulating data in NumPy arrays.</p>
+<ol type="1">
+<li><strong>Indexing:</strong></li>
+</ol>
+<ul>
+<li><p>Indexing refers to the process of accessing individual elements of a NumPy array.</p></li>
+<li><p>NumPy arrays are zero-indexed, which means the index of the first element is 0, the second element is 1, and so on.</p></li>
+<li><p>Indexing in NumPy can be done using square brackets <strong><code>[]</code></strong> with the index or indices enclosed.</p></li>
+</ul>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a NumPy array</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Access individual elements by index</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>element_2 <span class="op">=</span> arr[<span class="dv">2</span>]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li><strong>Slicing:</strong></li>
+</ol>
+<ul>
+<li><p>Slicing allows you to extract a portion (subarray) of a NumPy array by specifying a range of indices.</p></li>
+<li><p>The slicing syntax is <strong><code>start:stop:step</code></strong>, where <strong><code>start</code></strong> is the index where the slice begins, <strong><code>stop</code></strong> is the index where it ends (exclusive), and <strong><code>step</code></strong> is the step size between elements.</p>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a NumPy array</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Slicing examples</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>subarray1 <span class="op">=</span> arr[<span class="dv">2</span>:<span class="dv">6</span>]    <span class="co"># Slice from index 2 to 5</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>subarray2 <span class="op">=</span> arr[:<span class="dv">5</span>]     <span class="co"># Slice from the beginning to index 4 </span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>subarray3 <span class="op">=</span> arr[::<span class="dv">2</span>]    <span class="co"># Slice with a step of 2 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Multidimensional Arrays:</strong></li>
+</ol>
+<ul>
+<li><p>For multidimensional NumPy arrays (e.g., matrices), you can use indexing and slicing along multiple axes.</p></li>
+<li><p>Use a comma-separated pair of index or slice expressions to access elements or subarrays along different dimensions.</p>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2D NumPy array (matrix)</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>                   [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>                   [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]])</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Accessing elements in a 2D array</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>element_5 <span class="op">=</span> matrix[<span class="dv">1</span>, <span class="dv">1</span>]  <span class="co"># Access the element at row 1, column 1 (value: 5)</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Slicing a 2D array</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>row_2 <span class="op">=</span> matrix[<span class="dv">1</span>, :]      <span class="co"># Slice the entire second row (values: [4, 5, 6])</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>col_3 <span class="op">=</span> matrix[:, <span class="dv">2</span>]      <span class="co"># Slice the entire third column (values: [3, 6, 9])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Negative Indexing:</strong></li>
+</ol>
+<ul>
+<li>Negative indices count from the end of the array, where <strong><code>-1</code></strong> represents the last element, <strong><code>-2</code></strong> the second-to-last, and so on.</li>
+</ul>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>])</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>last_element <span class="op">=</span> arr[<span class="op">-</span><span class="dv">1</span>]   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="numpy-arithmetic-and-statistical-functions" class="level3">
+<h3 class="anchored" data-anchor-id="numpy-arithmetic-and-statistical-functions">2.1.4 <strong>Numpy Arithmetic and Statistical Functions</strong></h3>
+<p>NumPy provides a wide range of statistical and arithmetic functions that are essential for numerical and scientific computing. Here’s some theory information on these functions:</p>
+<p><strong>Arithmetic Functions:</strong></p>
+<ol type="1">
+<li><p><strong>Element-wise Operations:</strong></p>
+<ul>
+<li><p>NumPy allows you to perform arithmetic operations element-wise on arrays. This means that operations are applied individually to each element of the array, resulting in a new array with the same shape.</p></li>
+<li><p>Common element-wise operations include addition, subtraction, multiplication, division, exponentiation, and more.</p></li>
+</ul></li>
+<li><p><strong>Broadcasting:</strong></p>
+<ul>
+<li>Broadcasting is a powerful feature of NumPy that allows you to perform operations on arrays with different shapes. When operating on arrays of different shapes, NumPy automatically expands the smaller array to match the shape of the larger array.</li>
+</ul></li>
+<li><p><strong>Reduction Operations:</strong></p>
+<ul>
+<li>NumPy provides functions to perform reduction operations that aggregate the values in an array along a specified axis. Common reduction operations include sum, mean, median, minimum, maximum, and standard deviation.</li>
+</ul></li>
+<li><p><strong>Aggregation Functions:</strong></p>
+<ul>
+<li>Aggregation functions allow you to compute summary statistics of an array, such as the sum, mean, variance, and more, without specifying an axis. These functions return a single value.</li>
+</ul></li>
+</ol>
+<p><strong>Statistical Functions:</strong></p>
+<ol type="1">
+<li><p><strong>Descriptive Statistics:</strong></p>
+<ul>
+<li>NumPy offers functions like <strong><code>np.mean()</code></strong>, <strong><code>np.median()</code></strong>, <strong><code>np.var()</code></strong>, and <strong><code>np.std()</code></strong> for calculating descriptive statistics of an array, providing insights into the central tendency and spread of data.</li>
+</ul></li>
+<li><p><strong>Percentiles:</strong></p>
+<ul>
+<li>You can compute percentiles using the <strong><code>np.percentile()</code></strong> function, which helps identify values below which a given percentage of data falls. For example, the median corresponds to the 50th percentile.</li>
+</ul></li>
+<li><p><strong>Correlation and Covariance:</strong></p>
+<ul>
+<li>NumPy provides functions like <strong><code>np.corrcoef()</code></strong> and <strong><code>np.cov()</code></strong> to compute the correlation coefficient and covariance between arrays, which are important in statistical analysis.</li>
+</ul></li>
+<li><p><strong>Histograms:</strong></p>
+<ul>
+<li>The <strong><code>np.histogram()</code></strong> function allows you to create histograms of data, which are useful for visualizing the distribution of values.</li>
+</ul></li>
+<li><p><strong>Random Sampling:</strong></p>
+<ul>
+<li>NumPy’s <strong><code>np.random</code></strong> module provides functions for random sampling, including generating random numbers from various probability distributions, such as uniform, normal, and Poisson distributions.</li>
+</ul></li>
+<li><p><strong>Linear Algebra:</strong></p>
+<ul>
+<li>NumPy includes linear algebra functions for matrix operations, such as matrix multiplication (<strong><code>np.dot()</code></strong> or <strong><code>@</code></strong> operator), eigenvalue decomposition, singular value decomposition (SVD), and more.</li>
+</ul></li>
+</ol>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array 'y' with numerical values</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">1.4</span>, <span class="fl">0.4</span>, <span class="op">-</span><span class="fl">3.2</span>, <span class="fl">2.5</span>, <span class="fl">3.4</span>])</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Original array (y):'</span>, y, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the absolute values of 'y'</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Absolute values (np.abs(y)):'</span>, np.<span class="bu">abs</span>(y))</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the square root of the absolute values</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Square root of absolute values (np.sqrt(abs(y))):'</span>, np.sqrt(<span class="bu">abs</span>(y)))</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the sign (positive or negative) of each element in 'y'</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Sign of each element (np.sign(y)):'</span>, np.sign(y))</span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply exponentiation to each element in 'y'</span></span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Exponentiation (np.exp(y)):'</span>, np.exp(y))</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the elements in 'y' in ascending order</span></span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Sorted array (np.sort(y)):'</span>, np.sort(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original array (y): [-1.4  0.4 -3.2  2.5  3.4] 
+
+Absolute values (np.abs(y)): [1.4 0.4 3.2 2.5 3.4]
+Square root of absolute values (np.sqrt(abs(y))): [1.18321596 0.63245553 1.78885438 1.58113883 1.84390889]
+Sign of each element (np.sign(y)): [-1.  1. -1.  1.  1.]
+Exponentiation (np.exp(y)): [ 0.24659696  1.4918247   0.0407622  12.18249396 29.96410005]
+Sorted array (np.sort(y)): [-3.2 -1.4  0.4  2.5  3.4]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array 'x' with a range from -2 to 2 (inclusive)</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a random array 'y' with 5 elements</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randn(<span class="dv">5</span>)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the arrays 'x' and 'y'</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Array x:'</span>, x)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Array y:'</span>, y, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise addition of 'x' and 'y'</span></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Element-wise addition (np.add(x, y)):'</span>, np.add(x, y))  <span class="co"># Equivalent to x + y</span></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise subtraction of 'x' and 'y'</span></span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Element-wise subtraction (np.subtract(x, y)):'</span>, np.subtract(x, y))  <span class="co"># Equivalent to x - y</span></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise multiplication of 'x' and 'y'</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Element-wise multiplication (np.multiply(x, y)):'</span>, np.multiply(x, y))  <span class="co"># Equivalent to x * y</span></span>
+<span id="cb39-19"><a href="#cb39-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-20"><a href="#cb39-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise division of 'x' by 'y'</span></span>
+<span id="cb39-21"><a href="#cb39-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Element-wise division (np.divide(x, y)):'</span>, np.divide(x, y))  <span class="co"># Equivalent to x / y</span></span>
+<span id="cb39-22"><a href="#cb39-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-23"><a href="#cb39-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the element-wise maximum between 'x' and 'y'</span></span>
+<span id="cb39-24"><a href="#cb39-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Element-wise maximum (np.maximum(x, y)):'</span>, np.maximum(x, y))  <span class="co"># Equivalent to max(x, y)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Array x: [-2 -1  0  1  2]
+Array y: [-0.81932788  0.90053695  1.79993074  0.6655434   0.64634115] 
+
+Element-wise addition (np.add(x, y)): [-2.81932788 -0.09946305  1.79993074  1.6655434   2.64634115]
+Element-wise subtraction (np.subtract(x, y)): [-1.18067212 -1.90053695 -1.79993074  0.3344566   1.35365885]
+Element-wise multiplication (np.multiply(x, y)): [ 1.63865576 -0.90053695  0.          0.6655434   1.29268229]
+Element-wise division (np.divide(x, y)): [ 2.4410252  -1.11044861  0.          1.50253163  3.09434114]
+Element-wise maximum (np.maximum(x, y)): [-0.81932788  0.90053695  1.79993074  1.          2.        ]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an array 'y' with numeric values</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="op">-</span><span class="fl">3.2</span>, <span class="op">-</span><span class="fl">1.4</span>, <span class="fl">0.4</span>, <span class="fl">2.5</span>, <span class="fl">3.4</span>])</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Array y:'</span>, y, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the minimum value in 'y'</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Minimum value (np.min(y)):"</span>, np.<span class="bu">min</span>(y))</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the maximum value in 'y'</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Maximum value (np.max(y)):"</span>, np.<span class="bu">max</span>(y))</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the average (mean) of the elements in 'y'</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Average (np.mean(y)):"</span>, np.mean(y))</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the standard deviation of the elements in 'y'</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Standard deviation (np.std(y)):"</span>, np.std(y))</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the sum of all elements in 'y'</span></span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum of elements (np.sum(y)):"</span>, np.<span class="bu">sum</span>(y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Array y: [-3.2 -1.4  0.4  2.5  3.4] 
+
+Minimum value (np.min(y)): -3.2
+Maximum value (np.max(y)): 3.4
+Average (np.mean(y)): 0.34000000000000014
+Standard deviation (np.std(y)): 2.432776191925595
+Sum of elements (np.sum(y)): 1.7000000000000006</code></pre>
+</div>
+</div>
+</section>
+<section id="numpy-linear-algebra" class="level3">
+<h3 class="anchored" data-anchor-id="numpy-linear-algebra">2.1.5 Numpy Linear Algebra</h3>
+<p>Following are some of the linear algebra functions provided in numpy library.</p>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2 x 3 random matrix 'X'</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.randn(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Matrix X:</span><span class="ch">\n</span><span class="st">'</span>, X, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the transpose of matrix 'X', denoted as 'X^T'</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Transpose of X (X^T):</span><span class="ch">\n</span><span class="st">'</span>, X.T, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a random vector 'y'</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randn(<span class="dv">3</span>)</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vector y:'</span>, y, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform matrix-vector multiplication between 'X' and 'y'</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Matrix-vector multiplication (X * y):'</span>)</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'X.dot(y):</span><span class="ch">\n</span><span class="st">'</span>, X.dot(y), <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform matrix-matrix multiplication between 'X' and its transpose 'X^T'</span></span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Matrix-matrix multiplication:'</span>)</span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'X.dot(X^T):</span><span class="ch">\n</span><span class="st">'</span>, X.dot(X.T))  <span class="co"># Equivalent to X * X^T</span></span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">X.T.dot(X):</span><span class="ch">\n</span><span class="st">'</span>, X.T.dot(X))  <span class="co"># Equivalent to X^T * X</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Matrix X:
+ [[-0.021479    1.22155697  0.08357296]
+ [ 1.3539345   0.94740901 -1.05931331]] 
+
+Transpose of X (X^T):
+ [[-0.021479    1.3539345 ]
+ [ 1.22155697  0.94740901]
+ [ 0.08357296 -1.05931331]] 
+
+Vector y: [-0.23859442  0.8797308  -0.60987408] 
+
+Matrix-vector multiplication (X * y):
+X.dot(y):
+ [1.02879708 1.15647139] 
+
+Matrix-matrix multiplication:
+X.dot(X^T):
+ [[1.49964721 1.03970298]
+ [1.03970298 3.85286714]]
+
+X.T.dot(X):
+ [[ 1.83359997  1.25649193 -1.43603589]
+ [ 1.25649193  2.38978527 -0.90151384]
+ [-1.43603589 -0.90151384  1.12912912]]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a random 5x3 matrix 'X'</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.random.randn(<span class="dv">5</span>, <span class="dv">3</span>)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Matrix X:</span><span class="ch">\n</span><span class="st">'</span>, X, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the square matrix 'C' as the result of 'X^T * X'</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> X.T.dot(X)</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Matrix C (C = X^T * X):</span><span class="ch">\n</span><span class="st">'</span>, C, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the inverse of square matrix 'C'</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>invC <span class="op">=</span> np.linalg.inv(C)</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Inverse of C (np.linalg.inv(C)):</span><span class="ch">\n</span><span class="st">'</span>, invC, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the determinant of square matrix 'C'</span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>detC <span class="op">=</span> np.linalg.det(C)</span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Determinant of C (np.linalg.det(C)):'</span>, detC)</span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the eigenvalues 'S' and eigenvectors 'U' of square matrix 'C'</span></span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>S, U <span class="op">=</span> np.linalg.eig(C)</span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Eigenvalues of C:</span><span class="ch">\n</span><span class="st">'</span>, S)</span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Eigenvectors of C:</span><span class="ch">\n</span><span class="st">'</span>, U)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Matrix X:
+ [[-0.81905217  0.06607239  0.09011455]
+ [-0.9467893   0.09898675  1.31854839]
+ [ 0.91521597 -3.13857937  0.2087664 ]
+ [ 0.50029097  1.12822629 -0.66955952]
+ [ 1.54178446 -0.26065781 -0.37987486]] 
+
+Matrix C (C = X^T * X):
+ [[ 5.03226709 -2.857751   -2.05178942]
+ [-2.857751   11.20568144 -1.17515433]
+ [-2.05178942 -1.17515433  2.38288875]] 
+
+Inverse of C (np.linalg.inv(C)):
+ [[0.53867442 0.19616392 0.56056723]
+ [0.19616392 0.16554271 0.25054685]
+ [0.56056723 0.25054685 1.02589646]] 
+
+Determinant of C (np.linalg.det(C)): 47.00595322629777
+Eigenvalues of C:
+ [12.33829223  5.60253874  0.68000631]
+Eigenvectors of C:
+ [[-0.35496774  0.7653323   0.53690257]
+ [ 0.93414173  0.26756632  0.23619375]
+ [-0.03710966 -0.58538426  0.80990625]]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="introduction-to-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-pandas">2.2 Introduction to Pandas</h2>
+<p>Pandas is a popular open-source Python library designed for data manipulation and analysis. It provides easy-to-use data structures like <strong><code>series</code></strong> and <strong><code>DataFrame</code></strong> and functions for working with structured data, such as spreadsheets or SQL tables.</p>
+<section id="series" class="level3">
+<h3 class="anchored" data-anchor-id="series">2.2.1 Series</h3>
+<p>Following are the operations that could be done on a <strong><code>series</code></strong> data-structure.</p>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample Series</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'A'</span>: <span class="dv">10</span>, <span class="st">'B'</span>: <span class="dv">20</span>, <span class="st">'C'</span>: <span class="dv">30</span>, <span class="st">'D'</span>: <span class="dv">40</span>}</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>series <span class="op">=</span> pd.Series(data)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the original Series</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original Series:"</span>)</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Accessing and Slicing</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Accessing and Slicing:"</span>)</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Value at index 'B':"</span>, series[<span class="st">'B'</span>])</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Slicing by index ['B', 'C']:"</span>)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series[[<span class="st">'B'</span>, <span class="st">'C'</span>]])</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Mathematical Operations</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mathematical Operations:"</span>)</span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Add 5 to each element:"</span>)</span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series <span class="op">+</span> <span class="dv">5</span>)</span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Multiply each element by 2:"</span>)</span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series <span class="op">*</span> <span class="dv">2</span>)</span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Apply a custom function (e.g., square each element):"</span>)</span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.<span class="bu">apply</span>(<span class="kw">lambda</span> x: x<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtering</span></span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Filtering:"</span>)</span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Elements greater than 25:"</span>)</span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series[series <span class="op">&gt;</span> <span class="dv">25</span>])</span>
+<span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-34"><a href="#cb47-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-35"><a href="#cb47-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregation</span></span>
+<span id="cb47-36"><a href="#cb47-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aggregation:"</span>)</span>
+<span id="cb47-37"><a href="#cb47-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum of all elements:"</span>, series.<span class="bu">sum</span>())</span>
+<span id="cb47-38"><a href="#cb47-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean of elements:"</span>, series.mean())</span>
+<span id="cb47-39"><a href="#cb47-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Maximum element:"</span>, series.<span class="bu">max</span>())</span>
+<span id="cb47-40"><a href="#cb47-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-41"><a href="#cb47-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-42"><a href="#cb47-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Sorting</span></span>
+<span id="cb47-43"><a href="#cb47-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sorting:"</span>)</span>
+<span id="cb47-44"><a href="#cb47-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sort in ascending order:"</span>)</span>
+<span id="cb47-45"><a href="#cb47-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.sort_values())</span>
+<span id="cb47-46"><a href="#cb47-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sort in descending order:"</span>)</span>
+<span id="cb47-47"><a href="#cb47-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.sort_values(ascending<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb47-48"><a href="#cb47-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-49"><a href="#cb47-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-50"><a href="#cb47-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Index Manipulation</span></span>
+<span id="cb47-51"><a href="#cb47-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index Manipulation:"</span>)</span>
+<span id="cb47-52"><a href="#cb47-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Reset index:"</span>)</span>
+<span id="cb47-53"><a href="#cb47-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.reset_index(drop<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb47-54"><a href="#cb47-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Set a new index:"</span>)</span>
+<span id="cb47-55"><a href="#cb47-55" aria-hidden="true" tabindex="-1"></a>new_index <span class="op">=</span> [<span class="st">'X'</span>, <span class="st">'Y'</span>, <span class="st">'Z'</span>, <span class="st">'W'</span>]</span>
+<span id="cb47-56"><a href="#cb47-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(series.reindex(new_index))</span>
+<span id="cb47-57"><a href="#cb47-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb47-58"><a href="#cb47-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-59"><a href="#cb47-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Other Operations</span></span>
+<span id="cb47-60"><a href="#cb47-60" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Other Operations:"</span>)</span>
+<span id="cb47-61"><a href="#cb47-61" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Check if an index exists ('A' in series):"</span>, <span class="st">'A'</span> <span class="kw">in</span> series)</span>
+<span id="cb47-62"><a href="#cb47-62" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Get the unique values in the Series:"</span>, series.unique())</span>
+<span id="cb47-63"><a href="#cb47-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Count the occurrences of each unique value:"</span>, series.value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original Series:
+A    10
+B    20
+C    30
+D    40
+dtype: int64
+
+Accessing and Slicing:
+Value at index 'B': 20
+Slicing by index ['B', 'C']:
+B    20
+C    30
+dtype: int64
+
+Mathematical Operations:
+Add 5 to each element:
+A    15
+B    25
+C    35
+D    45
+dtype: int64
+Multiply each element by 2:
+A    20
+B    40
+C    60
+D    80
+dtype: int64
+Apply a custom function (e.g., square each element):
+A     100
+B     400
+C     900
+D    1600
+dtype: int64
+
+Filtering:
+Elements greater than 25:
+C    30
+D    40
+dtype: int64
+
+Aggregation:
+Sum of all elements: 100
+Mean of elements: 25.0
+Maximum element: 40
+
+Sorting:
+Sort in ascending order:
+A    10
+B    20
+C    30
+D    40
+dtype: int64
+Sort in descending order:
+D    40
+C    30
+B    20
+A    10
+dtype: int64
+
+Index Manipulation:
+Reset index:
+0    10
+1    20
+2    30
+3    40
+dtype: int64
+Set a new index:
+X   NaN
+Y   NaN
+Z   NaN
+W   NaN
+dtype: float64
+
+Other Operations:
+Check if an index exists ('A' in series): True
+Get the unique values in the Series: [10 20 30 40]
+Count the occurrences of each unique value: 10    1
+20    1
+30    1
+40    1
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="dataframe">2.2.2 DataFrame</h3>
+<p>A DataFrame is a two-dimensional, tabular data structure in Python’s pandas library. It is similar in structure to a spreadsheet or a SQL table.</p>
+<p>DataFrames are one of the most commonly used data structures for data manipulation and analysis in data science and data engineering tasks.</p>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample DataFrame</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Name'</span>: [<span class="st">'Abhishek'</span>, <span class="st">'Ajinkya'</span>, <span class="st">'Shreya'</span>, <span class="st">'Himanshu'</span>, <span class="st">'Lara'</span>],</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Age'</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">35</span>, <span class="dv">28</span>],</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'City'</span>: [<span class="st">'New York'</span>, <span class="st">'Los Angeles'</span>, <span class="st">'Chicago'</span>, <span class="st">'San Francisco'</span>, <span class="st">'Boston'</span>]</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the DataFrame</span></span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original DataFrame:"</span>)</span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Selecting and Filtering</span></span>
+<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Selecting and Filtering:"</span>)</span>
+<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Select columns 'Name' and 'Age':"</span>)</span>
+<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[[<span class="st">'Name'</span>, <span class="st">'Age'</span>]])</span>
+<span id="cb49-21"><a href="#cb49-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Filter rows where 'Age' is greater than 25:"</span>)</span>
+<span id="cb49-22"><a href="#cb49-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[df[<span class="st">'Age'</span>] <span class="op">&gt;</span> <span class="dv">25</span>])</span>
+<span id="cb49-23"><a href="#cb49-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-24"><a href="#cb49-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-25"><a href="#cb49-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Sorting</span></span>
+<span id="cb49-26"><a href="#cb49-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sorting:"</span>)</span>
+<span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sort by 'Age' in ascending order:"</span>)</span>
+<span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.sort_values(by<span class="op">=</span><span class="st">'Age'</span>))</span>
+<span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sort by 'Age' in descending order:"</span>)</span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.sort_values(by<span class="op">=</span><span class="st">'Age'</span>, ascending<span class="op">=</span><span class="va">False</span>))</span>
+<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregation</span></span>
+<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aggregation:"</span>)</span>
+<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Calculate mean age:"</span>, df[<span class="st">'Age'</span>].mean())</span>
+<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Group by 'City' and calculate mean age for each group:"</span>)</span>
+<span id="cb49-37"><a href="#cb49-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.groupby(<span class="st">'City'</span>)[<span class="st">'Age'</span>].mean())</span>
+<span id="cb49-38"><a href="#cb49-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-39"><a href="#cb49-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-40"><a href="#cb49-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding and Removing Columns</span></span>
+<span id="cb49-41"><a href="#cb49-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Adding and Removing Columns:"</span>)</span>
+<span id="cb49-42"><a href="#cb49-42" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Gender'</span>] <span class="op">=</span> [<span class="st">'Female'</span>, <span class="st">'Male'</span>, <span class="st">'Male'</span>, <span class="st">'Male'</span>, <span class="st">'Female'</span>]  <span class="co"># Add a new column 'Gender'</span></span>
+<span id="cb49-43"><a href="#cb49-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame after adding 'Gender' column:"</span>)</span>
+<span id="cb49-44"><a href="#cb49-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-45"><a href="#cb49-45" aria-hidden="true" tabindex="-1"></a>df.drop(columns<span class="op">=</span>[<span class="st">'Gender'</span>], inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># Remove the 'Gender' column</span></span>
+<span id="cb49-46"><a href="#cb49-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame after removing 'Gender' column:"</span>)</span>
+<span id="cb49-47"><a href="#cb49-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-48"><a href="#cb49-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-49"><a href="#cb49-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-50"><a href="#cb49-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Data Cleaning and Transformation</span></span>
+<span id="cb49-51"><a href="#cb49-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data Cleaning and Transformation:"</span>)</span>
+<span id="cb49-52"><a href="#cb49-52" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">'Age'</span>] <span class="op">&lt;</span> <span class="dv">25</span>, <span class="st">'Age'</span>] <span class="op">=</span> <span class="dv">25</span>  <span class="co"># Set ages below 25 to 25</span></span>
+<span id="cb49-53"><a href="#cb49-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame after cleaning age values:"</span>)</span>
+<span id="cb49-54"><a href="#cb49-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-55"><a href="#cb49-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-56"><a href="#cb49-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-57"><a href="#cb49-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Index Manipulation</span></span>
+<span id="cb49-58"><a href="#cb49-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Index Manipulation:"</span>)</span>
+<span id="cb49-59"><a href="#cb49-59" aria-hidden="true" tabindex="-1"></a>df.set_index(<span class="st">'Name'</span>, inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># Set 'Name' column as the index</span></span>
+<span id="cb49-60"><a href="#cb49-60" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame with 'Name' as index:"</span>)</span>
+<span id="cb49-61"><a href="#cb49-61" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-62"><a href="#cb49-62" aria-hidden="true" tabindex="-1"></a>df.reset_index(inplace<span class="op">=</span><span class="va">True</span>)  <span class="co"># Reset the index to default integer index</span></span>
+<span id="cb49-63"><a href="#cb49-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame with default index:"</span>)</span>
+<span id="cb49-64"><a href="#cb49-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb49-65"><a href="#cb49-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb49-66"><a href="#cb49-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-67"><a href="#cb49-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Data Input/Output</span></span>
+<span id="cb49-68"><a href="#cb49-68" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data Input/Output:"</span>)</span>
+<span id="cb49-69"><a href="#cb49-69" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'sample.csv'</span>, index<span class="op">=</span><span class="va">False</span>)  <span class="co"># Save the DataFrame to a CSV file</span></span>
+<span id="cb49-70"><a href="#cb49-70" aria-hidden="true" tabindex="-1"></a>loaded_df <span class="op">=</span> pd.read_csv(<span class="st">'sample.csv'</span>)  <span class="co"># Load data from the saved CSV file</span></span>
+<span id="cb49-71"><a href="#cb49-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Loaded DataFrame from CSV:"</span>)</span>
+<span id="cb49-72"><a href="#cb49-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(loaded_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original DataFrame:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   22        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+Selecting and Filtering:
+Select columns 'Name' and 'Age':
+       Name  Age
+0  Abhishek   25
+1   Ajinkya   30
+2    Shreya   22
+3  Himanshu   35
+4      Lara   28
+Filter rows where 'Age' is greater than 25:
+       Name  Age           City
+1   Ajinkya   30    Los Angeles
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+
+Sorting:
+Sort by 'Age' in ascending order:
+       Name  Age           City
+2    Shreya   22        Chicago
+0  Abhishek   25       New York
+4      Lara   28         Boston
+1   Ajinkya   30    Los Angeles
+3  Himanshu   35  San Francisco
+Sort by 'Age' in descending order:
+       Name  Age           City
+3  Himanshu   35  San Francisco
+1   Ajinkya   30    Los Angeles
+4      Lara   28         Boston
+0  Abhishek   25       New York
+2    Shreya   22        Chicago
+
+Aggregation:
+Calculate mean age: 28.0
+Group by 'City' and calculate mean age for each group:
+City
+Boston           28.0
+Chicago          22.0
+Los Angeles      30.0
+New York         25.0
+San Francisco    35.0
+Name: Age, dtype: float64
+
+Adding and Removing Columns:
+DataFrame after adding 'Gender' column:
+       Name  Age           City  Gender
+0  Abhishek   25       New York  Female
+1   Ajinkya   30    Los Angeles    Male
+2    Shreya   22        Chicago    Male
+3  Himanshu   35  San Francisco    Male
+4      Lara   28         Boston  Female
+DataFrame after removing 'Gender' column:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   22        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+
+Data Cleaning and Transformation:
+DataFrame after cleaning age values:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   25        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+
+Index Manipulation:
+DataFrame with 'Name' as index:
+          Age           City
+Name                        
+Abhishek   25       New York
+Ajinkya    30    Los Angeles
+Shreya     25        Chicago
+Himanshu   35  San Francisco
+Lara       28         Boston
+DataFrame with default index:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   25        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+
+Data Input/Output:
+Loaded DataFrame from CSV:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   25        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston</code></pre>
+</div>
+</div>
+</section>
+<section id="arithmetic-operations" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-operations">2.2.3 Arithmetic Operations</h3>
+<p>Following are some of the arithemtic opearions that could be performed on a DataFrame.</p>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample DataFrame</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Name'</span>: [<span class="st">'Abhishek'</span>, <span class="st">'Ajinkya'</span>, <span class="st">'Shreya'</span>, <span class="st">'Himanshu'</span>, <span class="st">'Lara'</span>],</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Age'</span>: [<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">22</span>, <span class="dv">35</span>, <span class="dv">28</span>],</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'City'</span>: [<span class="st">'New York'</span>, <span class="st">'Los Angeles'</span>, <span class="st">'Chicago'</span>, <span class="st">'San Francisco'</span>, <span class="st">'Boston'</span>]</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the original data</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original data:"</span>)</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpose the data</span></span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data after transposition (data.T):"</span>)</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.T)</span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform addition by adding 4 to each element</span></span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data after addition (data + 4):"</span>)</span>
+<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">'Age'</span>] <span class="op">+</span> <span class="dv">4</span>)</span>
+<span id="cb51-21"><a href="#cb51-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-22"><a href="#cb51-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform multiplication by multiplying each element by 10</span></span>
+<span id="cb51-23"><a href="#cb51-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data after multiplication (data * 10):"</span>)</span>
+<span id="cb51-24"><a href="#cb51-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data <span class="op">*</span> <span class="dv">10</span>)</span>
+<span id="cb51-25"><a href="#cb51-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-26"><a href="#cb51-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new DataFrame 'data2' with random values</span></span>
+<span id="cb51-27"><a href="#cb51-27" aria-hidden="true" tabindex="-1"></a>columnNames <span class="op">=</span> [<span class="st">'x1'</span>, <span class="st">'x2'</span>, <span class="st">'x3'</span>]</span>
+<span id="cb51-28"><a href="#cb51-28" aria-hidden="true" tabindex="-1"></a>data2 <span class="op">=</span> pd.DataFrame(np.random.randn(<span class="dv">5</span>, <span class="dv">3</span>), columns<span class="op">=</span>columnNames)</span>
+<span id="cb51-29"><a href="#cb51-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">New DataFrame 'data2':"</span>)</span>
+<span id="cb51-30"><a href="#cb51-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data2)</span>
+<span id="cb51-31"><a href="#cb51-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-32"><a href="#cb51-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform element-wise addition between 'data' and 'data2'</span></span>
+<span id="cb51-33"><a href="#cb51-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Result of element-wise addition (data + data2):"</span>)</span>
+<span id="cb51-34"><a href="#cb51-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.add(data2))</span>
+<span id="cb51-35"><a href="#cb51-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-36"><a href="#cb51-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the maximum value for each column</span></span>
+<span id="cb51-37"><a href="#cb51-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Maximum value per column:"</span>)</span>
+<span id="cb51-38"><a href="#cb51-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.<span class="bu">max</span>())</span>
+<span id="cb51-39"><a href="#cb51-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-40"><a href="#cb51-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the minimum value for each row</span></span>
+<span id="cb51-41"><a href="#cb51-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Minimum value in 'Age':"</span>)</span>
+<span id="cb51-42"><a href="#cb51-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">'Age'</span>].<span class="bu">min</span>())</span>
+<span id="cb51-43"><a href="#cb51-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-44"><a href="#cb51-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the sum of values for each column</span></span>
+<span id="cb51-45"><a href="#cb51-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Sum of values per column:"</span>)</span>
+<span id="cb51-46"><a href="#cb51-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.<span class="bu">sum</span>())</span>
+<span id="cb51-47"><a href="#cb51-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-48"><a href="#cb51-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the average value for each row</span></span>
+<span id="cb51-49"><a href="#cb51-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Average value of 'Age':"</span>)</span>
+<span id="cb51-50"><a href="#cb51-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data[<span class="st">'Age'</span>].mean())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original data:
+       Name  Age           City
+0  Abhishek   25       New York
+1   Ajinkya   30    Los Angeles
+2    Shreya   22        Chicago
+3  Himanshu   35  San Francisco
+4      Lara   28         Boston
+
+Data after transposition (data.T):
+             0            1        2              3       4
+Name  Abhishek      Ajinkya   Shreya       Himanshu    Lara
+Age         25           30       22             35      28
+City  New York  Los Angeles  Chicago  San Francisco  Boston
+
+Data after addition (data + 4):
+0    29
+1    34
+2    26
+3    39
+4    32
+Name: Age, dtype: int64
+
+Data after multiplication (data * 10):
+                                                Name  Age  \
+0  AbhishekAbhishekAbhishekAbhishekAbhishekAbhish...  250   
+1  AjinkyaAjinkyaAjinkyaAjinkyaAjinkyaAjinkyaAjin...  300   
+2  ShreyaShreyaShreyaShreyaShreyaShreyaShreyaShre...  220   
+3  HimanshuHimanshuHimanshuHimanshuHimanshuHimans...  350   
+4           LaraLaraLaraLaraLaraLaraLaraLaraLaraLara  280   
+
+                                                City  
+0  New YorkNew YorkNew YorkNew YorkNew YorkNew Yo...  
+1  Los AngelesLos AngelesLos AngelesLos AngelesLo...  
+2  ChicagoChicagoChicagoChicagoChicagoChicagoChic...  
+3  San FranciscoSan FranciscoSan FranciscoSan Fra...  
+4  BostonBostonBostonBostonBostonBostonBostonBost...  
+
+New DataFrame 'data2':
+         x1        x2        x3
+0  0.480338 -0.318315 -0.624396
+1 -0.815679  1.167900 -1.006792
+2  0.008458  0.515370 -0.676543
+3  0.709607 -0.495539  0.712588
+4  1.127008  1.686942 -0.912926
+
+Result of element-wise addition (data + data2):
+   Age City Name  x1  x2  x3
+0  NaN  NaN  NaN NaN NaN NaN
+1  NaN  NaN  NaN NaN NaN NaN
+2  NaN  NaN  NaN NaN NaN NaN
+3  NaN  NaN  NaN NaN NaN NaN
+4  NaN  NaN  NaN NaN NaN NaN
+
+Maximum value per column:
+Name           Shreya
+Age                35
+City    San Francisco
+dtype: object
+
+Minimum value in 'Age':
+22
+
+Sum of values per column:
+Name                AbhishekAjinkyaShreyaHimanshuLara
+Age                                               140
+City    New YorkLos AngelesChicagoSan FranciscoBoston
+dtype: object
+
+Average value of 'Age':
+28.0</code></pre>
+</div>
+</div>
+<p>The value_counts() function can also be applied to a pandas DataFrame.</p>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>objects <span class="op">=</span> pd.DataFrame({<span class="st">'shape'</span>: [<span class="st">'circle'</span>, <span class="st">'square'</span>, <span class="st">'square'</span>, <span class="st">'square'</span>, <span class="st">'circle'</span>, <span class="st">'rectangle'</span>],</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">'color'</span>: [<span class="st">'red'</span>, <span class="st">'red'</span>, <span class="st">'red'</span>, <span class="st">'blue'</span>, <span class="st">'blue'</span>, <span class="st">'blue'</span>]})</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(objects)</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(objects[<span class="st">'shape'</span>].value_counts().sort_values())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       shape color
+0     circle   red
+1     square   red
+2     square   red
+3     square  blue
+4     circle  blue
+5  rectangle  blue
+shape
+rectangle    1
+circle       2
+square       3
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="plotting-series-and-dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-series-and-dataframe">2.2.4 Plotting <code>Series</code> and <code>DataFrame:</code></h3>
+<p>You can visualize data in both Pandas Series and DataFrames using various types of plots and graphs with the help of libraries like Matplotlib and Seaborn.</p>
+<p><strong>For Series:</strong></p>
+<ol type="1">
+<li><p><strong>Line Plot:</strong></p>
+<ul>
+<li><p>Use <strong><code>matplotlib.pyplot.plot()</code></strong> to create a line plot of a Series.</p></li>
+<li><p>Useful for visualizing trends or changes in data over time or along a sequence.</p></li>
+</ul></li>
+<li><p><strong>Bar Plot:</strong></p>
+<ul>
+<li><p>Create bar plots using <strong><code>matplotlib.pyplot.bar()</code></strong> or <strong><code>pandas.Series.plot(kind='bar')</code></strong>.</p></li>
+<li><p>Suitable for displaying categorical data or comparing different categories.</p></li>
+</ul></li>
+<li><p><strong>Histogram:</strong></p>
+<ul>
+<li><p>Plot a histogram of a Series using <strong><code>matplotlib.pyplot.hist()</code></strong> or <strong><code>pandas.Series.plot(kind='hist')</code></strong>.</p></li>
+<li><p>Helps visualize the distribution of continuous data.</p></li>
+</ul></li>
+<li><p><strong>Scatter Plot:</strong></p>
+<ul>
+<li><p>Generate scatter plots using <strong><code>matplotlib.pyplot.scatter()</code></strong> or <strong><code>pandas.Series.plot(kind='scatter')</code></strong>.</p></li>
+<li><p>Useful for visualizing relationships and correlations between two Series.</p></li>
+</ul></li>
+<li><p><strong>Box Plot:</strong></p>
+<ul>
+<li><p>Use <strong><code>matplotlib.pyplot.boxplot()</code></strong> or <strong><code>pandas.Series.plot(kind='box')</code></strong> to create box plots.</p></li>
+<li><p>Shows the summary statistics (quartiles) and identifies outliers.</p></li>
+</ul></li>
+</ol>
+<p><strong>For DataFrames:</strong></p>
+<ol type="1">
+<li><p><strong>Line Plot:</strong></p>
+<ul>
+<li><p>You can create line plots for each column in a DataFrame using <strong><code>pandas.DataFrame.plot()</code></strong> with <strong><code>kind='line'</code></strong>.</p></li>
+<li><p>Useful for visualizing time-series data or trends in multiple variables.</p></li>
+</ul></li>
+<li><p><strong>Bar Plot:</strong></p>
+<ul>
+<li><p>Similar to Series, you can create bar plots for DataFrame columns using <strong><code>pandas.DataFrame.plot()</code></strong> with <strong><code>kind='bar'</code></strong>.</p></li>
+<li><p>Compares categorical data across different columns.</p></li>
+</ul></li>
+<li><p><strong>Histogram:</strong></p>
+<ul>
+<li><p>Use <strong><code>pandas.DataFrame.plot()</code></strong> with <strong><code>kind='hist'</code></strong> to generate histograms for multiple columns.</p></li>
+<li><p>Helps visualize the distribution of multiple variables.</p></li>
+</ul></li>
+<li><p><strong>Scatter Plot:</strong></p>
+<ul>
+<li><p>Create scatter plots for pairs of columns in a DataFrame using <strong><code>matplotlib.pyplot.scatter()</code></strong> or <strong><code>pandas.plotting.scatter_matrix()</code></strong>.</p></li>
+<li><p>Useful for exploring relationships between multiple variables.</p></li>
+</ul></li>
+<li><p><strong>Box Plot:</strong></p>
+<ul>
+<li><p>Generate box plots for each column in a DataFrame using <strong><code>pandas.DataFrame.plot()</code></strong> with <strong><code>kind='box'</code></strong>.</p></li>
+<li><p>Displays the distribution and summary statistics for multiple variables.</p></li>
+</ul></li>
+<li><p><strong>Heatmap:</strong></p>
+<ul>
+<li><p>Heatmaps can be created using libraries like Seaborn (<strong><code>seaborn.heatmap()</code></strong>) to visualize the correlation matrix of a DataFrame.</p></li>
+<li><p>Helpful for identifying correlations between numerical variables.</p></li>
+</ul></li>
+<li><p><strong>Pair Plot:</strong></p>
+<ul>
+<li><p>Seaborn’s <strong><code>seaborn.pairplot()</code></strong> function creates a grid of scatter plots for pairs of variables in a DataFrame.</p></li>
+<li><p>Useful for quickly examining relationships between multiple variables.</p></li>
+</ul></li>
+<li><p><strong>3D Plot:</strong></p>
+<ul>
+<li>For three-dimensional data, you can create 3D scatter plots or surface plots using Matplotlib’s 3D plotting functions.</li>
+</ul></li>
+</ol>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample DataFrame</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Year'</span>: [<span class="dv">2010</span>, <span class="dv">2011</span>, <span class="dv">2012</span>, <span class="dv">2013</span>, <span class="dv">2014</span>, <span class="dv">2015</span>],</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Revenue'</span>: [<span class="dv">10000</span>, <span class="dv">12000</span>, <span class="dv">15000</span>, <span class="dv">18000</span>, <span class="dv">20000</span>, <span class="dv">22000</span>],</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Profit'</span>: [<span class="dv">2000</span>, <span class="dv">2500</span>, <span class="dv">3000</span>, <span class="dv">3500</span>, <span class="dv">4000</span>, <span class="dv">4500</span>],</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Expenses'</span>: [<span class="dv">8000</span>, <span class="dv">9500</span>, <span class="dv">12000</span>, <span class="dv">14500</span>, <span class="dv">16000</span>, <span class="dv">17500</span>]</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Line Plot for Revenue and Profit over Years</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Year'</span>], df[<span class="st">'Revenue'</span>], label<span class="op">=</span><span class="st">'Revenue'</span>, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>plt.plot(df[<span class="st">'Year'</span>], df[<span class="st">'Profit'</span>], label<span class="op">=</span><span class="st">'Profit'</span>, marker<span class="op">=</span><span class="st">'s'</span>)</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Revenue and Profit Over Years'</span>)</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Amount'</span>)</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-32-output-1.png" width="833" height="449"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar Plot for Expenses</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>plt.bar(df[<span class="st">'Year'</span>], df[<span class="st">'Expenses'</span>], color<span class="op">=</span><span class="st">'red'</span>, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Expenses Over Years'</span>)</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Amount'</span>)</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>)</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-33-output-1.png" width="684" height="449"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram of Revenue</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Revenue'</span>], bins<span class="op">=</span><span class="dv">5</span>, color<span class="op">=</span><span class="st">'green'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Revenue'</span>)</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Revenue'</span>)</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>)</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-34-output-1.png" width="672" height="449"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter Plot of Profit vs. Expenses</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(df[<span class="st">'Profit'</span>], df[<span class="st">'Expenses'</span>], c<span class="op">=</span>df[<span class="st">'Year'</span>], cmap<span class="op">=</span><span class="st">'viridis'</span>, s<span class="op">=</span><span class="dv">100</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Profit vs. Expenses'</span>)</span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Profit'</span>)</span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Expenses'</span>)</span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>plt.colorbar(label<span class="op">=</span><span class="st">'Year'</span>)</span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-35-output-1.png" width="675" height="449"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Box Plot of Profit</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>plt.boxplot(df[<span class="st">'Profit'</span>], vert<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Box Plot of Profit'</span>)</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'x'</span>)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-36-output-1.png" width="632" height="431"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pie Chart of Revenue Distribution</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>plt.pie(df[<span class="st">'Revenue'</span>], labels<span class="op">=</span>df[<span class="st">'Year'</span>], autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">140</span>)</span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Revenue Distribution Over Years'</span>)</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'equal'</span>)</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="homework1-abhishek_deore_files/figure-html/cell-37-output-1.png" width="645" height="631"></p>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
